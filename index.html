@@ -1,0 +1,80 @@
+---
+title:  Karen Bale ~ Home
+---
+
+{% include header.html %}
+
+            <section class="homepage_slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/slider/1.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/slider/2.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/slider/3.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/slider/4.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/slider/5.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/slider/6.jpg"/>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="bio clearfix">
+            {% for post in site.categories.about %}
+                <a href="{{.site.url}}{{ post.url }}"><h2>{{ post.title }}</h2></a>
+                <p>{{ post.content | truncatewords: 50}}</p>
+                <a class="more-btn" href="{{.site.url}}{{ post.url }}">Keep Reading --></a>
+            {% endfor %}
+            </section>
+            
+                <section class="carousel">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                            {% for post in site.categories.book %} 
+                                <a href="{{.site.url}}{{ post.url }}">
+                                    <img src="{{.site.url}}{{ post.img-url }}" />
+                                </a>
+                            {% endfor %}
+                            </li>
+                            <li>
+                            {% for post in site.categories.book %} 
+                                <a href="{{.site.url}}{{ post.url }}">
+                                    <img src="{{.site.url}}{{ post.img-url }}" />
+                                </a>
+                            {% endfor %}
+                            </li>
+                            <li>
+                            {% for post in site.categories.book %} 
+                                <a href="{{.site.url}}{{ post.url }}">
+                                    <img src="{{.site.url}}{{ post.img-url }}" />
+                                </a>
+                            {% endfor %}
+                            </li>
+                        </ul>
+                    </div>
+                </section>             
+
+                <div class="content clearfix">
+                  {% for post in site.categories.post limit: 3 %}
+                    <section>
+                        <a class="post_title" href="{{.site.url}}{{ post.url }}"><h3>{{ post.title }}</h3></a>
+                        <p>{{ post.content | truncatewords: 50 }}</p>
+                        <a href="{{.site.url}}{{post.url}}">More --></a>
+                    </section>
+                  {% endfor %}
+                </div>
+
+{% include footer.html %}
+
+

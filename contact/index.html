@@ -1,0 +1,37 @@
+---
+layout: interior
+title: Contact
+---
+
+
+<div class="map">
+    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=San+Diego,+CA&amp;aq=0&amp;oq=s&amp;sll=32.715329,-117.157255&amp;sspn=0.001356,0.003031&amp;ie=UTF8&amp;hq=&amp;hnear=San+Diego,+California&amp;t=m&amp;ll=32.715666,-117.158203&amp;spn=0.716368,2.197266&amp;z=9&amp;iwloc=A&amp;output=embed"></iframe>
+</div>
+<div class="contact_content clearfix">
+    <div class="contact_left">
+        <h3>Contact Information</h3>
+        <ul>
+            <li>Phone: 000 - 000 - 0000</li>
+            <li>Phone: 000 - 000 - 0000</li>
+            <li>Email: karen@karenabale.com</li>
+        </ul>
+    </div>
+    <div class="contact_right">
+        <h3>Contact Form:</h3>
+            <form method="post" action="../php/contactengine.php">
+                <label for="Name">Name:</label>
+                <input type="text" name="Name" id="Name" />
+                
+                <label for="City">City:</label>
+                <input type="text" name="City" id="City" />
+    
+                <label for="Email">Email:</label>
+                <input type="text" name="Email" id="Email" />
+                
+                <label for="Message">Message:</label><br />
+                <textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+
+                <input type="submit" name="submit" value="Submit" class="submit-button" />
+            </form>
+    </div>
+</div>

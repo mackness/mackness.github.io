@@ -1,0 +1,8 @@
+---
+layout: interior
+title: About
+---
+<img class="about_img" src="{{site.url}}/img/about.jpg" />
+{% for post in site.categories.about %} 
+	{{post.content}}
+{% endfor %}
