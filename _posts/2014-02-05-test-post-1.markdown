@@ -1,5 +1,5 @@
 ---
-layout: interior
+layout: post
 title:  "Test Post 1"
 date:   2014-02-05 18:16:29
 categories: post

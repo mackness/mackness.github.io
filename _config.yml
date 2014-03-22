@@ -1,4 +1,4 @@
 name: Karen A Bale
 markdown: redcarpet
-pygments: true
-url: http://mackness.github.io
+pygments: false
+url: http://0.0.0.0:4000

@@ -1,6 +1,8 @@
 /*
+ *
  * Karen Bale's Website v.1.0
  * Author: Mack Solomon / macksolomon.com / @mackness
+ *
  */
 /* ========== B  A  S  E   S  T  Y  L  E  S  ========== */
 /****************
@@ -158,11 +160,6 @@ header nav ul li {
   text-align: center;
 }
 header nav ul a {
-  transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
   font-size: 21px;
   color: #fff;
   margin: 0;
@@ -643,10 +640,10 @@ img.about_img {
 }
 .book_img {
   float: left;
-  border-radius: 3px;
+  border-radius: 0 3px 0 3px;
   margin: 26px 34px 6px 0;
   border-bottom: solid 5px #fff;
-  border-right: solid 5px #fff;
+  border-right: solid 7px #fff;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 /*-- Blog Styles --*/
