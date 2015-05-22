@@ -1,0 +1,131 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+	background: #faf4f1;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	line-height: 22px;
+}
+
+.header {
+	color: #fff;
+	font-weight: 800;
+	padding: 20px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	position: fixed;
+	background: #8c2f5e;
+}
+
+.brand {
+	margin: 0;
+	float: left;
+	font-size: 28px;
+}
+
+.icon {
+	fill: #fff;
+  width: 36px;
+  height: 31px;
+}
+
+.icon-move {
+	float: left;
+	margin-right: 10px;
+  margin-bottom: -4px;
+}
+
+.icon-github {
+	float: right;
+}
+
+.navigation {
+	padding: 0;
+	margin: 0;
+	float: right;
+	list-style: none;
+}
+
+.navigation li {
+	float: left;
+	margin-right: 43px;
+}
+
+.navigation li:first-child {
+	padding-top: 5px;
+}
+
+.direction {
+	color: #8c2f5e;
+	font-size: 7em;
+	font-weight: 800;
+	text-transform: uppercase;
+
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.demo-panel {
+	top: 74px;
+	left:0;
+	bottom: 0;
+	width: 50%;
+	border: 0;
+	position: absolute;
+	height: calc(100% - 74px);
+}
+
+.docs-panel {
+	top: 74px;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	position: fixed;
+	overflow-y: scroll;
+	background: #fff;
+	padding: 17px 35px; 
+}
+
+.buffer {
+	width: 1400px;
+	height: 1400px;
+	display: block;
+}
+
+.title {
+	color: #8c2f5e;
+}
+
+.code {
+	background: #8c2f5e;
+  color: #fff;
+  font-family: menlo;
+  padding: 0px 4px 1px 4px;
+  border-radius: 2px;
+}
+
+
+
+
+
+
+
