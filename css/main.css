@@ -2,115 +2,125 @@
 	project: Mack Solomon's Portfolio
 	author: @mackness
 */
-
 body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto Mono', arial;	
-}
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', arial; }
 
 a {
-	text-decoration: none;
-}
+  text-decoration: none; }
 
 a:hover,
 a:active,
 a:focus {
-	text-decoration: underline;
-}
+  text-decoration: underline; }
 
 .header {
-	padding-top: 10px;
-}
+  padding-top: 10px; }
 
 .header__headline {
-	width: 100%;
-	text-align: center;
-	margin: 0px 0 10px 0;
-}
+  width: 100%;
+  text-align: center;
+  margin: 0px 0 10px 0; }
 
 .header__sub-headline {
-	width: 100%;
-	text-align: center;
-	display: block;
-}
+  width: 100%;
+  text-align: center;
+  display: block; }
 
 .logo {
-    width: 150px;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-}
+  width: 150px;
+  display: block;
+  margin: 0 auto; }
 
-.logo:hover .logo__glasses {
-
-}
+.logo:hover .glasses__image {
+  transform: translateY(85%); }
 
 .glasses {
-	width: 100%;
-	text-align: center;
-	position: fixed;
-    top: 105px;
-    z-index: 100;
-    opacity: 0;
-}
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 105px;
+  left: 0;
+  z-index: 100;
+  opacity: 0; }
 
-.glasses-animation {
-    opacity: 1;
-	animation: flipIn 1s 1 linear;
-}
+.glasses__image {
+  opacity: 0; }
+
+.glasses-translate {
+  opacity: 1;
+  animation: translateIn 1s 1 linear; }
+
+.glasses-flip {
+  opacity: 1;
+  animation: flipIn 1s 1 linear; }
+
+.move-down {
+  transform: translateY(100%); }
 
 @keyframes flipIn {
   0% {
-  	animation-duration: 2.5s;
-	transform: rotate(140deg) translateX(0)  scale(2, 3.5) skew(0, 0) translateX(calc(50% + 55px))
-  }
+    opacity: 1;
+    transform: rotate(120deg); }
+  10% {
+    transform: rotate(200deg); }
+  20% {
+    transform: rotate(280deg); }
   30% {
-  	animation-duration: 1s;
-	transform: rotate(65deg) translateX(0)  scale(1.5, 2.25) skew(0, 0) translateX(calc(25% + 27px))
-  }
+    transform: rotate(360deg); }
+  40% {
+    transform: rotate(440deg); }
+  50% {
+    transform: rotate(520deg); }
+  60% {
+    transform: rotate(600deg); }
+  70% {
+    transform: rotate(680deg); }
+  80% {
+    transform: rotate(760deg); }
+  90% {
+    transform: rotate(840deg); }
   100% {
-	transform: rotate(15deg) translateX(0) scale(1, 1) skew(0, 0) translateX(0)
-  }
-}
+    /*transform: rotate(0deg)*/ } }
+
+@keyframes translateIn {
+  0% {
+    transform: translateX(calc(50% + 55px)); }
+  30% {
+    transform: translateX(calc(25% + 27px)); }
+  100% {
+    transform: translateX(0); } }
 
 .glasses__image {
-    max-width: 110px;
-}
+  max-width: 110px; }
 
 .logo__image {
-	max-width: 120px;
-	display: block;
-	margin: 0 auto;
-    position: relative;
-    left: -2px;
-}
+  max-width: 120px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: -2px; }
 
 .nav {
-	overflow: hidden;
-	background-color: #f1f1f1;
-}
+  overflow: hidden;
+  background-color: #f1f1f1; }
 
 .nav__inner {
-	max-width: 1100px;
-	margin: 0 auto;
-	display: block;
-}
+  max-width: 1100px;
+  margin: 0 auto;
+  display: block; }
 
 .nav__menu {
-	list-style: none;
-	overflow: hidden;
-	float: right;
-	margin: 10px 0 15px 0;
-}
+  list-style: none;
+  overflow: hidden;
+  float: right;
+  margin: 10px 0 15px 0; }
+
+.nav__menu--left {
+  float: left; }
 
 .nav__menu__item {
-	float: left;
-	margin-right: 8px;
-	    margin-right: 13px;
-}
-
-
-
-
-
+  float: left;
+  margin-right: 8px;
+  margin-right: 13px; }

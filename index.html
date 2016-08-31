@@ -4,14 +4,16 @@
 	<title>Mack Solomon - Front-end developer</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript">
-
-	</script>
 </head>
 <body>
 <nav class="nav">
 	<div class="nav__inner">
-		<ul class="nav__menu">
+		<ul class="nav__menu nav__menu--left">
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/resume">github</a></li>
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/blog">codepen</a></li>
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/contact">linkedin</a></li>
+		</ul>
+		<ul class="nav__menu nav__menu--right">
 			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/resume">resum&eacute;</a></li>
 			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/blog">blog</a></li>
 			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/contact">contact</a></li>
@@ -19,11 +21,11 @@
 	</div>
 </nav>
 <header class="header">
-	<div class="glasses">
-		<img class="glasses__image" src="./images/glasses.png" />
-	</div>
 	<div class="logo">
 		<img class="logo__image" src="./images/face.png" />
+		<div class="glasses">
+			<img class="glasses__image" src="./images/glasses.png" />
+		</div>
 	</div>
 	<h1 class="header__headline">Mack Solomon</h1>
 	<span class="header__sub-headline">maker of web things.</span>
@@ -32,8 +34,12 @@
 <script src="js/baffle.min.js"></script>
 <script src="js/main.js"></script>
 <script type="text/javascript">
-	document.querySelector('.glasses').classList.add('glasses-animation')
-	baffle('.header__headline').start().reveal(3000, 1000);
-	baffle('.header__sub-headline').start().reveal(3000, 1000);
+	var duration = 1000;
+	baffle('.header__headline').start().reveal(duration * 4, duration + 300);
+	baffle('.header__sub-headline').start().reveal(duration * 4 + 300, duration + 200);
+	setTimeout(function() {
+		document.querySelector('.glasses').classList.add('glasses-translate')
+		document.querySelector('.glasses__image').classList.add('glasses-flip')
+	}, duration - 500)
 </script>
 </html>
