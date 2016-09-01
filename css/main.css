@@ -108,7 +108,8 @@ a:focus {
 
 .nav {
   overflow: hidden;
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  box-shadow: inset 0px 0px 1px #ccc; }
 
 .nav__inner {
   max-width: 1100px;
@@ -156,7 +157,8 @@ a:focus {
   width: calc(50% - 50px);
   position: relative;
   padding: 10px 15px;
-  background-color: #f1f1f1; }
+  background-color: #f1f1f1;
+  box-shadow: inset 0px 0px 1px #ccc; }
 
 .timeline__item--left {
   float: left; }
