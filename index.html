@@ -30,13 +30,81 @@
 	<h1 class="header__headline">Mack Solomon</h1>
 	<span class="header__sub-headline">maker of web things.</span>
 </header>
+
+<section class="timeline">
+	<div class="timeline__stem"></div>
+	<div class="timeline-block">
+		<div class="timeline__item timeline__item--left">
+			<div class="timeline__item__date">May 2016</div>
+			<a href="#" class="timeline__item__title">Category Organizer</a>
+			<p class="timeline__item__description">This is a system that allows
+			editors to easily organize items within a category via drag and drop. I decided to keep things simple
+			and use React on it's own without a framework like Redux or Flux. As the project grows in 
+			size and complexity im sure I will be able to justify a frameworks incorporation.</p>
+			<ul class="timeline__item__checklist">
+				<li>react</li>
+				<li>express</li>
+				<li>webpack</li>
+				<li>firebase</li>
+			</ul>
+		</div>
+	</div>
+	<div class="timeline-block">
+		<div class="timeline__item timeline__item--right">
+			<div class="timeline__item__date">May 2016</div>
+			<a href="#" class="timeline__item__title">Category Organizer</a>
+			<p class="timeline__item__description">This is a system that allows
+			editors to easily organize items within a category via drag and drop. I decided to keep things simple
+			and use React on it's own without a framework like Redux or Flux. As the project grows in
+			size and complexity im sure I will be able to justify a frameworks incorporation.</p>
+			<ul class="timeline__item__checklist">
+				<li>react</li>
+				<li>express</li>
+				<li>webpack</li>
+				<li>firebase</li>
+			</ul>
+		</div>
+	</div>
+	<div class="timeline-block">
+		<div class="timeline__item timeline__item--left">
+			<div class="timeline__item__date">May 2016</div>
+			<a href="#" class="timeline__item__title">Category Organizer</a>
+			<p class="timeline__item__description">This is a system that allows
+			editors to easily organize items within a category via drag and drop. I decided to keep things simple
+			and use React on it's own without a framework like Redux or Flux. As the project grows in 
+			size and complexity im sure I will be able to justify a frameworks incorporation.</p>
+			<ul class="timeline__item__checklist">
+				<li>react</li>
+				<li>express</li>
+				<li>webpack</li>
+				<li>firebase</li>
+			</ul>
+		</div>
+	</div>
+	<div class="timeline-block">
+		<div class="timeline__item timeline__item--right">
+			<div class="timeline__item__date">May 2016</div>
+			<a href="#" class="timeline__item__title">Category Organizer</a>
+			<p class="timeline__item__description">This is a system that allows
+			editors to easily organize items within a category via drag and drop. I decided to keep things simple
+			and use React on it's own without a framework like Redux or Flux. As the project grows in
+			size and complexity im sure I will be able to justify a frameworks incorporation.</p>
+			<ul class="timeline__item__checklist">
+				<li>react</li>
+				<li>express</li>
+				<li>webpack</li>
+				<li>firebase</li>
+			</ul>
+		</div>
+	</div>
+</section>
 </body>
 <script src="js/baffle.min.js"></script>
 <script src="js/main.js"></script>
 <script type="text/javascript">
 	var duration = 1000;
 	baffle('.header__headline').start().reveal(duration * 4, duration + 300);
-	baffle('.header__sub-headline').start().reveal(duration * 4 + 300, duration + 200);
+	baffle('.header__sub-headline').start().reveal(duration * 4 + 300, duration + 500);
 	setTimeout(function() {
 		document.querySelector('.glasses').classList.add('glasses-translate')
 		document.querySelector('.glasses__image').classList.add('glasses-flip')

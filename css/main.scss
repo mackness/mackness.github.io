@@ -3,10 +3,17 @@
 	author: @mackness
 */
 
+$primary-color: #f1f1f1;
+
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto Mono', arial;	
+	font-family: 'Roboto Mono', arial;
+	 box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 a {
@@ -48,7 +55,7 @@ a:focus {
 .glasses {
 	width: 100%;
 	text-align: center;
-	position: fixed;
+	position: absolute;
     top: 105px;
     left: 0;
     z-index: 100;
@@ -136,7 +143,7 @@ a:focus {
 
 .nav {
 	overflow: hidden;
-	background-color: #f1f1f1;
+	background-color: $primary-color;
 }
 
 .nav__inner {
@@ -159,10 +166,90 @@ a:focus {
 .nav__menu__item {
 	float: left;
 	margin-right: 8px;
-	    margin-right: 13px;
+	margin-right: 13px;
 }
 
+.timeline {
+	max-width: 1100px;
+	padding: 0 5px;
+	display: block;
+	margin: 65px auto;
+	overflow: hidden;
+	position: relative;
+}
 
+.timeline-block {
+	width: 100%;
+	overflow: hidden;
+	display: block;
+}
 
+.timeline__stem {
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 4px;
+	display: block;
+	background-color: black;
+	transform: translateX(-50%);
+	position: absolute;
+}
+
+.timeline__item {
+	width: calc(50% - 50px);
+	position: relative;
+	padding: 10px 15px;
+	background-color: $primary-color;
+}
+
+.timeline__item--left {
+	float: left;
+	&:before {
+		content: " ";
+		top: 0;
+		right: -50px;
+		height: 4px;
+		width: 50px;
+		background-color: black;
+		position: absolute;
+	}
+
+	.timeline__item__date {
+		right: 0;
+	}
+}
+
+.timeline__item--right {
+	float: right;
+	&:before {
+		content: " ";
+		top: 0;
+		left: -50px;
+		height: 4px;
+		width: 50px;
+		background-color: black;
+		position: absolute;
+	}
+
+	.timeline__item__date {
+		left: 0;
+	}
+}
+
+.timeline__item__title {
+	font-size: 18px;
+    margin-top: 35px;
+    display: block;
+    font-weight: bold;
+}
+
+.timeline__item__date {
+	float: right;
+	color: white;
+	top: 0;
+	position: absolute;
+	background-color: black;
+	padding: 3px 7px;
+}
 
 
