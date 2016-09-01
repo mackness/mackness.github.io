@@ -174,9 +174,10 @@ a:focus {
 	max-width: 1100px;
 	padding: 0 5px;
 	display: block;
-	margin: 65px auto;
+	margin: 65px auto 0 auto;
 	overflow: hidden;
 	position: relative;
+	padding-bottom: 115px;
 }
 
 .timeline-block {
@@ -254,4 +255,16 @@ a:focus {
 	padding: 3px 7px;
 }
 
+.footer {
+    display: block;
+    width: 100%;
+    background: black;
+    overflow: hidden;
+}
 
+.footer__content {
+	color: white;
+	width: 100%;
+	text-align: center;
+	margin: 10px 0 13px 0;
+}
