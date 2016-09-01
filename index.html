@@ -105,12 +105,7 @@
 <script src="js/baffle.min.js"></script>
 <script src="js/main.js"></script>
 <script type="text/javascript">
-	var duration = 1000;
-	baffle('.header__headline').start().reveal(duration * 4, duration + 300);
-	baffle('.header__sub-headline').start().reveal(duration * 4 + 300, duration + 500);
-	setTimeout(function() {
-		document.querySelector('.glasses').classList.add('glasses-translate')
-		document.querySelector('.glasses__image').classList.add('glasses-flip')
-	}, duration - 500)
+	baffle('.header__headline').start().reveal(1000, 1000);
+	baffle('.header__sub-headline').start().reveal(2000, 2000);
 </script>
 </html>

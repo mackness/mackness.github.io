@@ -15,7 +15,7 @@ body {
 	padding: 0;
 	font-family: 'Roboto Mono', arial;
 	 box-sizing: border-box;
-
+	 font-size: 16px;
 }
 
 *, *:before, *:after {
@@ -65,21 +65,21 @@ a:focus {
     top: 105px;
     left: 0;
     z-index: 100;
-    opacity: 0;
+    opacity: 1;
 }
 
 .glasses__image {
-	opacity: 0;
+	opacity: 1;
 }
 
 .glasses-translate {
     opacity: 1;
-	animation: translateIn 1s 1 linear;
+	/*animation: translateIn 1s 1 linear;*/
 }
 
 .glasses-flip {
     opacity: 1;
-	animation: flipIn 1s 1 linear;
+	/*animation: flipIn 1s 1 linear;*/
 }
 
 .move-down {
@@ -186,7 +186,7 @@ a:focus {
 	position: relative;
 	padding-bottom: 115px;
 
-	@media (min-width: $small) {
+	@media (min-width: $medium) {
 		margin: 45px auto 0 auto;
 	}
 }
@@ -206,7 +206,7 @@ a:focus {
 	background-color: black;
 	position: absolute;
 
-	@media (min-width: $small) {
+	@media (min-width: $medium) {
 		left: 50%;
 		transform: translateX(-50%);
 	}	
@@ -220,7 +220,7 @@ a:focus {
 	background-color: $primary-color;
     box-shadow: inset 0px 0px 1px #ccc;
 
-	@media (min-width: $small) {
+	@media (min-width: $medium) {
 		width: calc(50% - 50px);
 		margin:  0 0 0 0;
 	}
@@ -239,7 +239,7 @@ a:focus {
 		position: absolute;
 	}
 
-	@media (min-width: $small) {
+	@media (min-width: $medium) {
 		float: left;
 		&:before {
 			right: -50px;
@@ -277,19 +277,18 @@ a:focus {
 	padding: 3px 7px;
 }
 
-.timeline__item__date--left {
+.timeline__item__date--right {
 	left: 0;
 }
 
 .timeline__item__date--left {
 	right: auto;
 	left: 0;
-	@media (min-width: $small) {
+	@media (min-width: $medium) {
 		right: 0;
 		left: auto;
 	}
 }
-
 
 .footer {
     display: block;
@@ -304,8 +303,4 @@ a:focus {
 	text-align: center;
 	margin: 10px 0 13px 0;
 }
-
-
-
-
 
