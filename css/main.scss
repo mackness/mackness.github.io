@@ -5,11 +5,17 @@
 
 $primary-color: #f1f1f1;
 
+$small:  640px;
+$medium: 1024px;
+$large:  1440px;
+$xlarge: 1920px;
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto Mono', arial;
 	 box-sizing: border-box;
+
 }
 
 *, *:before, *:after {
@@ -158,6 +164,7 @@ a:focus {
 	overflow: hidden;
 	float: right;
 	margin: 10px 0 15px 0;
+	padding: 0 0px 0 10px;
 }
 
 .nav__menu--left {
@@ -174,10 +181,14 @@ a:focus {
 	max-width: 1100px;
 	padding: 0 5px;
 	display: block;
-	margin: 65px auto 0 auto;
+	margin: 25px auto 0 auto;
 	overflow: hidden;
 	position: relative;
 	padding-bottom: 115px;
+
+	@media (min-width: $small) {
+		margin: 45px auto 0 auto;
+	}
 }
 
 .timeline-block {
@@ -189,36 +200,51 @@ a:focus {
 .timeline__stem {
 	top: 0;
 	bottom: 0;
-	left: 50%;
+	left: 5px;
 	width: 4px;
 	display: block;
 	background-color: black;
-	transform: translateX(-50%);
 	position: absolute;
+
+	@media (min-width: $small) {
+		left: 50%;
+		transform: translateX(-50%);
+	}	
 }
 
 .timeline__item {
-	width: calc(50% - 50px);
+	width: calc(100% - 30px);
 	position: relative;
 	padding: 10px 15px;
+	margin:  0 0 15px 0;
 	background-color: $primary-color;
     box-shadow: inset 0px 0px 1px #ccc;
+
+	@media (min-width: $small) {
+		width: calc(50% - 50px);
+		margin:  0 0 0 0;
+	}
 }
 
 .timeline__item--left {
-	float: left;
+	float: right;
 	&:before {
 		content: " ";
 		top: 0;
-		right: -50px;
+		left: -50px;
+		right: auto;
 		height: 4px;
 		width: 50px;
 		background-color: black;
 		position: absolute;
 	}
 
-	.timeline__item__date {
-		right: 0;
+	@media (min-width: $small) {
+		float: left;
+		&:before {
+			right: -50px;
+			left: auto;
+		}
 	}
 }
 
@@ -232,10 +258,6 @@ a:focus {
 		width: 50px;
 		background-color: black;
 		position: absolute;
-	}
-
-	.timeline__item__date {
-		left: 0;
 	}
 }
 
@@ -255,6 +277,20 @@ a:focus {
 	padding: 3px 7px;
 }
 
+.timeline__item__date--left {
+	left: 0;
+}
+
+.timeline__item__date--left {
+	right: auto;
+	left: 0;
+	@media (min-width: $small) {
+		right: 0;
+		left: auto;
+	}
+}
+
+
 .footer {
     display: block;
     width: 100%;
@@ -268,3 +304,8 @@ a:focus {
 	text-align: center;
 	margin: 10px 0 13px 0;
 }
+
+
+
+
+
