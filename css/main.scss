@@ -10,6 +10,9 @@ $medium: 1024px;
 $large:  1440px;
 $xlarge: 1920px;
 
+@import 'timeline';
+@import 'resume';
+
 body {
 	margin: 0;
 	padding: 0;
@@ -39,7 +42,7 @@ a:focus {
 .header__headline {
 	width: 100%;
 	text-align: center;
-	margin: 0px 0 10px 0;
+	margin: 20px 0 10px 0;
 }
 
 .header__sub-headline {
@@ -52,6 +55,7 @@ a:focus {
     width: 150px;
     display: block;
     margin: 0 auto;
+    position: relative;
 }
 
 .logo:hover .glasses__image {
@@ -62,7 +66,7 @@ a:focus {
 	width: 100%;
 	text-align: center;
 	position: absolute;
-    top: 105px;
+    top: 49px;
     left: 0;
     z-index: 100;
     opacity: 1;
@@ -177,7 +181,7 @@ a:focus {
 	margin-right: 13px;
 }
 
-.timeline {
+.content {
 	max-width: 1100px;
 	padding: 0 5px;
 	display: block;
@@ -191,104 +195,7 @@ a:focus {
 	}
 }
 
-.timeline-block {
-	width: 100%;
-	overflow: hidden;
-	display: block;
-}
 
-.timeline__stem {
-	top: 0;
-	bottom: 0;
-	left: 5px;
-	width: 4px;
-	display: block;
-	background-color: black;
-	position: absolute;
-
-	@media (min-width: $medium) {
-		left: 50%;
-		transform: translateX(-50%);
-	}	
-}
-
-.timeline__item {
-	width: calc(100% - 30px);
-	position: relative;
-	padding: 10px 15px;
-	margin:  0 0 15px 0;
-	background-color: $primary-color;
-    box-shadow: inset 0px 0px 1px #ccc;
-
-	@media (min-width: $medium) {
-		width: calc(50% - 50px);
-		margin:  0 0 0 0;
-	}
-}
-
-.timeline__item--left {
-	float: right;
-	&:before {
-		content: " ";
-		top: 0;
-		left: -50px;
-		right: auto;
-		height: 4px;
-		width: 50px;
-		background-color: black;
-		position: absolute;
-	}
-
-	@media (min-width: $medium) {
-		float: left;
-		&:before {
-			right: -50px;
-			left: auto;
-		}
-	}
-}
-
-.timeline__item--right {
-	float: right;
-	&:before {
-		content: " ";
-		top: 0;
-		left: -50px;
-		height: 4px;
-		width: 50px;
-		background-color: black;
-		position: absolute;
-	}
-}
-
-.timeline__item__title {
-	font-size: 18px;
-    margin-top: 35px;
-    display: block;
-    font-weight: bold;
-}
-
-.timeline__item__date {
-	float: right;
-	color: white;
-	top: 0;
-	position: absolute;
-	background-color: black;
-	padding: 3px 7px;
-}
-
-.timeline__item__date--right {
-	left: 0;
-}
-
-.timeline__item__date--left {
-	right: auto;
-	left: 0;
-	@media (min-width: $medium) {
-		right: 0;
-		left: auto;
-	}
-}
 
 .footer {
     display: block;
