@@ -10,6 +10,7 @@ $medium: 1024px;
 $large:  1440px;
 $xlarge: 1920px;
 
+@import 'normalize';
 @import 'timeline';
 @import 'resume';
 
@@ -17,8 +18,8 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto Mono', arial;
-	 box-sizing: border-box;
-	 font-size: 16px;
+	box-sizing: border-box;
+	font-size: 16px;
 }
 
 *, *:before, *:after {
@@ -194,8 +195,6 @@ a:focus {
 		margin: 45px auto 0 auto;
 	}
 }
-
-
 
 .footer {
     display: block;
