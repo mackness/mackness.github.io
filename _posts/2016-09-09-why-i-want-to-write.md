@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Why I want to write a blog"
-date:   2016-09-07 20:57:02 -0700
+title:  "Easy static site hosting on S3 with GIT deployment!"
+date:   2016-09-08	 20:57:02 -0700
 categories: jekyll update
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

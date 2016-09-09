@@ -485,6 +485,17 @@ textarea {
 .resume__job__title {
   margin: 0 0 10px 0; }
 
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px 0 20px; }
+
+.post-list__title {
+  margin-bottom: 10px; }
+
+.content.blog {
+  margin: 0 auto; }
+
 .content.post {
   max-width: 1100px;
   padding: 0 35px;
@@ -497,10 +508,15 @@ textarea {
     .content.post {
       margin: 25px auto 0 auto; } }
 
+html {
+  box-sizing: border-box; }
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto Mono', arial;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   font-size: 16px; }
 
@@ -509,16 +525,12 @@ body {
 
 a {
   text-decoration: none;
-  color: #00AF00; }
-
-a:hover,
-a:active,
-a:visited {
-  color: #8B00AF; }
+  color: #008F00; }
 
 a:hover,
 a:active,
 a:focus {
+  color: #E8AE0C;
   text-decoration: underline; }
 
 .header {
@@ -529,6 +541,9 @@ a:focus {
   text-align: center;
   margin: 30px 0 10px 0; }
 
+.header__headline--logo {
+  margin: 0 0 10px 0; }
+
 .header__sub-headline {
   width: 100%;
   text-align: center;
@@ -537,7 +552,7 @@ a:focus {
 .logo {
   width: 150px;
   display: block;
-  margin: 0 auto;
+  margin: 10px auto 0px auto;
   position: relative; }
 
 .logo:hover .glasses__image {
@@ -554,50 +569,6 @@ a:focus {
 
 .glasses__image {
   opacity: 1; }
-
-.glasses-translate {
-  opacity: 1;
-  /*animation: translateIn 1s 1 linear;*/ }
-
-.glasses-flip {
-  opacity: 1;
-  /*animation: flipIn 1s 1 linear;*/ }
-
-.move-down {
-  transform: translateY(100%); }
-
-@keyframes flipIn {
-  0% {
-    opacity: 1;
-    transform: rotate(120deg); }
-  10% {
-    transform: rotate(200deg); }
-  20% {
-    transform: rotate(280deg); }
-  30% {
-    transform: rotate(360deg); }
-  40% {
-    transform: rotate(440deg); }
-  50% {
-    transform: rotate(520deg); }
-  60% {
-    transform: rotate(600deg); }
-  70% {
-    transform: rotate(680deg); }
-  80% {
-    transform: rotate(760deg); }
-  90% {
-    transform: rotate(840deg); }
-  100% {
-    /*transform: rotate(0deg)*/ } }
-
-@keyframes translateIn {
-  0% {
-    transform: translateX(calc(50% + 55px)); }
-  30% {
-    transform: translateX(calc(25% + 27px)); }
-  100% {
-    transform: translateX(0); } }
 
 .glasses__image {
   max-width: 110px; }
@@ -625,10 +596,13 @@ a:focus {
   overflow: hidden;
   float: right;
   margin: 10px 0 15px 0;
-  padding: 0 0px 0 10px; }
+  padding: 0 0px 0 13px; }
 
 .nav__menu--left {
-  float: left; }
+  float: right; }
+  @media (min-width: 1024px) {
+    .nav__menu--left {
+      float: left; } }
 
 .nav__menu__item {
   float: left;

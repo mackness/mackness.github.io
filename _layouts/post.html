@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>{% if page.title %} {{ page.title }} {% endif %} {{ site.name }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css">
 </head>
@@ -58,6 +59,6 @@
 <script src="{{site.baseurl}}/js/baffle.min.js"></script>
 <script src="{{site.baseurl}}/js/main.js"></script>
 <script type="text/javascript">
-	baffle('.header__headline').start().reveal(1000, 1000);
+	// baffle('.header__headline').start().reveal(1000, 1000);
 </script>
 </html>
