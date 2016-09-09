@@ -591,7 +591,8 @@ a:focus {
   max-width: 110px; }
 
 .logo__image {
-  max-width: 120px;
+  width: 120px;
+  height: 120px;
   display: block;
   margin: 0 auto;
   position: relative;
