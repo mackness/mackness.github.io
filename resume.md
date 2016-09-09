@@ -15,8 +15,15 @@ permalink: /resume/
 * Modern Javascript Patterns
 * Async JavaScript
 * GIT
-* Build tools (Grunt / Gulp / Webpack)
-* Templating languages (Jade, HAML, Handlebars, HTMLBars, Django Templates)
+* **Build tools**
+	* Grunt
+	* Gulp
+	* Webpack
+* **Templating languages**
+	* Jade
+	* HAML
+	* Handlebars
+	* Django template language
 * SVG
 * SVG animations
 * React
@@ -30,6 +37,14 @@ permalink: /resume/
 * Rapid Prototyping
 * Adobe Illustrator
 * Adobe Photoshop
+
+###  Interested In:
+
+* functional programming paradigms
+* elm
+* mithril
+* aws
+* linux systems
 
 ###  Employment History:
 

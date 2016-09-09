@@ -28,6 +28,13 @@ body {
 
 a {
 	text-decoration: none;
+	color: #00AF00;
+}
+
+a:hover,
+a:active,
+a:visited {
+	color: #8B00AF;
 }
 
 a:hover,

@@ -496,7 +496,13 @@ body {
   box-sizing: inherit; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #00AF00; }
+
+a:hover,
+a:active,
+a:visited {
+  color: #8B00AF; }
 
 a:hover,
 a:active,
