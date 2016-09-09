@@ -12,24 +12,41 @@ permalink: /resume/
 * CSS
 * Atomic Design Patterns
 * BEM CSS syntax
+* SVG animations
 * Modern Javascript Patterns
 * Async JavaScript
 * GIT
-* Build tools (Grunt / Gulp / Webpack)
-* Templating languages (Jade, HAML, Handlebars, HTMLBars, Django Templates)
-* SVG
-* SVG animations
+* **Build tools**
+	* Grunt
+	* Gulp
+	* Webpack
+* **Templating languages**
+	* Jade
+	* HAML
+	* Handlebars
+	* Django template language
 * React
 * Mithril (aggressively learning)
 * Node
 * Express
-* NoSQL (Mongodb, Firebase, CouchDB, ect.)
+* **NoSQL databases**
+	* MongoDB
+	* Firebase 
+	* CouchDB
 * RESTful API Architecture
 * UI / UX design
 * Interface design
 * Rapid Prototyping
 * Adobe Illustrator
 * Adobe Photoshop
+
+###  Interested In:
+
+* functional programming paradigms
+* elm
+* mithril
+* aws
+* linux systems
 
 ###  Employment History:
 

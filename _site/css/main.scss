@@ -29,6 +29,13 @@ body {
 
 a {
 	text-decoration: none;
+	color: #00AF00;
+}
+
+a:hover,
+a:active,
+a:visited {
+	color: #8B00AF;
 }
 
 a:hover,
@@ -146,7 +153,8 @@ a:focus {
 }
 
 .logo__image {
-	max-width: 120px;
+	width: 120px;
+	height: 120px;
 	display: block;
 	margin: 0 auto;
     position: relative;

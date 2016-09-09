@@ -508,7 +508,13 @@ body {
   box-sizing: inherit; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #00AF00; }
+
+a:hover,
+a:active,
+a:visited {
+  color: #8B00AF; }
 
 a:hover,
 a:active,
@@ -597,7 +603,8 @@ a:focus {
   max-width: 110px; }
 
 .logo__image {
-  max-width: 120px;
+  width: 120px;
+  height: 120px;
   display: block;
   margin: 0 auto;
   position: relative;
