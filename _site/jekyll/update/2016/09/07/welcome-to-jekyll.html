@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Welcome to Jekyll!  </title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body class="home">
+<nav class="nav">
+	<div class="nav__inner">
+		<ul class="nav__menu nav__menu--left">
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="https://github.com/mackness">github</a></li>
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="http://codepen.io/mackness">codepen</a></li>
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="https://www.linkedin.com/in/macksolomon">linkedin</a></li>
+		</ul>
+		<ul class="nav__menu nav__menu--right">
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/">home</a></li>
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/resume">resum&eacute;</a></li>
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/blog">blog</a></li>
+			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/contact">contact</a></li>
+		</ul>
+	</div>
+</nav>
+<header class="header">
+	<h1 class="header__headline">Welcome to Jekyll!</h1>
+</header>
+<section class="content welcome-to-jekyll">
+
+	<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+
+
+</section>
+<footer class="footer">
+	<p class="footer__content">long live the web.</p>
+</footer>
+</body>
+<script src="/js/baffle.min.js"></script>
+<script src="/js/main.js"></script>
+<script type="text/javascript">
+	baffle('.header__headline').start().reveal(1000, 1000);
+</script>
+</html>
