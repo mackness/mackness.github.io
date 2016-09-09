@@ -14,9 +14,10 @@ $xlarge: 1920px;
 @import 'timeline';
 @import 'resume';
 @import 'blog';
+@import 'syntax';
 
 html {
-  box-sizing: border-box;
+  box-sizing: border-box;	
 }
 
 body {
@@ -53,6 +54,7 @@ a:focus {
 	width: 100%;
 	text-align: center;
 	margin: 30px 0 10px 0;
+	padding: 0 20px 0 20px;
 }
 
 .header__headline--logo {

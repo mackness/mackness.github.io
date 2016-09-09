@@ -1,2 +1,2 @@
 # mackness.github.io
-This is a demo site for directional.
+This is my portfolio website and blog.
