@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Easy static site hosting on S3 with GIT deployment!"
 date:   2016-09-07 20:57:02 -0700
 categories: jekyll update
 ---

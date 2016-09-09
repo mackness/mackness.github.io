@@ -13,6 +13,7 @@ $xlarge: 1920px;
 @import 'normalize';
 @import 'timeline';
 @import 'resume';
+@import 'post';
 
 body {
 	margin: 0;
@@ -43,7 +44,7 @@ a:focus {
 .header__headline {
 	width: 100%;
 	text-align: center;
-	margin: 20px 0 10px 0;
+	margin: 30px 0 10px 0;
 }
 
 .header__sub-headline {
@@ -194,6 +195,12 @@ a:focus {
 	@media (min-width: $medium) {
 		margin: 45px auto 0 auto;
 	}
+}
+
+.disqus-block {
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 0 15px 15px 15px;
 }
 
 .footer {

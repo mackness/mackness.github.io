@@ -1,0 +1,27 @@
+
+
+
+.content.post {
+	max-width: 1100px;
+	padding: 0 35px;
+	display: block;
+	margin: 25px auto 0 auto;;
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 50px;
+
+	@media (min-width: $medium) {
+		margin: 25px auto 0 auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
