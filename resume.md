@@ -12,6 +12,7 @@ permalink: /resume/
 * CSS
 * Atomic Design Patterns
 * BEM CSS syntax
+* SVG animations
 * Modern Javascript Patterns
 * Async JavaScript
 * GIT
@@ -24,13 +25,14 @@ permalink: /resume/
 	* HAML
 	* Handlebars
 	* Django template language
-* SVG
-* SVG animations
 * React
 * Mithril (aggressively learning)
 * Node
 * Express
-* NoSQL (Mongodb, Firebase, CouchDB, ect.)
+* **NoSQL databases**
+	* MongoDB
+	* Firebase 
+	* CouchDB
 * RESTful API Architecture
 * UI / UX design
 * Interface design
