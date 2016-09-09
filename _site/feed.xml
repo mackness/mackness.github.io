@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mack's Portfolio</title>
-    <description>I am a web devloper based out of San Francisco, CA.  I love building things for the web. 
+    <description>I am a web devloper based out of San Francisco, CA.    I love building things for the web. 
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Sep 2016 13:33:00 -0700</pubDate>
-    <lastBuildDate>Thu, 08 Sep 2016 13:33:00 -0700</lastBuildDate>
+    <pubDate>Thu, 08 Sep 2016 20:00:33 -0700</pubDate>
+    <lastBuildDate>Thu, 08 Sep 2016 20:00:33 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
