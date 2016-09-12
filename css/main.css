@@ -600,7 +600,7 @@ a:focus {
   padding: 0 20px 0 20px; }
 
 .header__headline--logo {
-  margin: 0 0 10px 0; }
+  margin: 3px 0 10px 0; }
 
 .header__sub-headline {
   width: 100%;
@@ -651,7 +651,7 @@ a:focus {
 .nav__menu {
   list-style: none;
   float: right;
-  margin: 10px 0 15px 0;
+  margin: 12px 0 13px 0;
   padding: 0 0px 0 13px; }
 
 .nav__menu--left {
