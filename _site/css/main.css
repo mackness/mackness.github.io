@@ -410,11 +410,14 @@ textarea {
       width: calc(50% - 50px);
       margin: 0 0 0 0; } }
 
-.timeline__item__checklist li {
-  margin-bottom: 5px; }
+.timeline__item__checklist li a {
+  display: block;
+  padding-top: 4px;
+  padding-bottom: 4px; }
   @media (min-width: 1024px) {
-    .timeline__item__checklist li {
-      margin-bottom: 0; } }
+    .timeline__item__checklist li a {
+      padding-top: 0;
+      padding-bottom: 0; } }
 
 .timeline__item--left {
   float: right; }

@@ -48,10 +48,13 @@
 	}
 }
 
-.timeline__item__checklist li {
-	margin-bottom: 5px;	
+.timeline__item__checklist li a {
+	display: block;
+	padding-top: 4px;	
+	padding-bottom: 4px;	
 	@media (min-width: $medium) {
-		margin-bottom: 0;
+		padding-top: 0;	
+		padding-bottom: 0;
 	}
 }
 
