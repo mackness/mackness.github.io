@@ -6,11 +6,8 @@
 	<style type="text/css">
 		html {
 		  font-family: sans-serif;
-		  /* 1 */
 		  -ms-text-size-adjust: 100%;
-		  /* 2 */
 		  -webkit-text-size-adjust: 100%;
-		  /* 2 */
 		}
 
 		body {
@@ -20,15 +17,12 @@
 		header,
 		nav,
 		section {
-		  /* 1 */
 		  display: block;
 		}
 
 		a {
 		  background-color: transparent;
-		  /* 1 */
 		  -webkit-text-decoration-skip: objects;
-		  /* 2 */
 		}
 
 		h1 {
@@ -44,25 +38,20 @@
 		input,
 		textarea {
 		  font: inherit;
-		  /* 1 */
 		  margin: 0;
-		  /* 2 */
 		}
 
 		button,
 		input {
-		  /* 1 */
 		  overflow: visible;
 		}
 
 		button {
-		  /* 1 */
 		  text-transform: none;
 		}
 
 		button {
 		  -webkit-appearance: button;
-		  /* 2 */
 		}
 
 		button::-moz-focus-inner {
@@ -85,9 +74,7 @@
 
 		::-webkit-file-upload-button {
 		  -webkit-appearance: button;
-		  /* 1 */
 		  font: inherit;
-		  /* 2 */
 		}
 
 		.timeline {
@@ -258,7 +245,7 @@
 		  border-style: solid;
 		  border-width: 1px;
 		  border-color: #cccccc;
-		  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+		  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 		  color: #444444;
 		  display: block;
 		  font-family: inherit;
@@ -448,7 +435,7 @@
 </nav>
 <header class="header">
 	<div class="logo">
-		<img class="logo__image" src="./images/face.png">
+		<img class="logo__image" src="./images/face.jpg">
 		<div class="glasses">
 			<img class="glasses__image" src="./images/glasses.png">
 		</div>
@@ -570,7 +557,7 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
 <script src="js/baffle.min.js"></script>
-<script src="js/main.js" async></script>
+<script src="js/main.js" async defer></script>
 <script type="text/javascript">
 	baffle('.header__headline').start().reveal(1000, 1000);
 	baffle('.header__sub-headline').start().reveal(2000, 2000);
