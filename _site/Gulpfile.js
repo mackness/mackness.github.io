@@ -25,39 +25,12 @@ gulp.task('sass', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    //.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
 })
-
-gulp.task('compressCSS', function (cb) {
-  var options = {
-    preserveComments: 'license'
-  };
- 
-  pump([
-      gulp.src('lib/*.js'),
-      minifier(options, uglifyjs),
-      gulp.dest('dist')
-    ],
-    cb
-  );
-});
-
-gulp.task('compressJS', function (cb) {
-  var options = {
-    preserveComments: 'license'
-  };
- 
-  pump([
-      gulp.src('lib/*.js'),
-      minifier(options, uglifyjs),
-      gulp.dest('dist')
-    ],
-    cb
-  );
-});
 
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['sass']);
@@ -66,7 +39,7 @@ gulp.task('watch', function() {
 })
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'compressCSS', 'compressJS', 'browserSync', 'watch'],
+  runSequence(['sass', 'browserSync', 'watch'],
     callback
   )
 })
