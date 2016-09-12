@@ -25,9 +25,10 @@ permalink: /resume/
 	* HAML
 	* Handlebars
 	* Django template language
+* NPM
+* Node
 * React
 * Mithril (aggressively learning)
-* Node
 * Express
 * **NoSQL databases**
 	* MongoDB
