@@ -26,7 +26,7 @@ gulp.task('sass', () => {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    //.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
@@ -38,7 +38,6 @@ gulp.task('imagemin', () => {
     .pipe(imagemin())
     .pipe(gulp.dest('./images'))
 });
-
 
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['sass']);
