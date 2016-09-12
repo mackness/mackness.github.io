@@ -403,7 +403,7 @@ textarea {
   position: relative;
   padding: 10px 15px;
   margin: 0 0 15px 0;
-  background-color: #f1f1f1;
+  background-color: #fcfcfc;
   box-shadow: inset 0px 0px 1px #ccc; }
   @media (min-width: 1024px) {
     .timeline__item {
@@ -562,7 +562,8 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 1.55em; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -640,7 +641,7 @@ a:focus {
   left: -2px; }
 
 .nav {
-  background-color: #f1f1f1;
+  background-color: #fcfcfc;
   box-shadow: inset 0px 0px 1px #ccc; }
 
 .nav__inner {
