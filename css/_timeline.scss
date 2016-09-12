@@ -48,6 +48,13 @@
 	}
 }
 
+.timeline__item__checklist li {
+	margin-bottom: 5px;	
+	@media (min-width: $medium) {
+		margin-bottom: 0;
+	}
+}
+
 .timeline__item--left {
 	float: right;
 	&:before {
