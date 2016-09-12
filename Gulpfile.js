@@ -9,8 +9,9 @@ var runSequence = require('run-sequence');
 var uglifyjs = require('uglify-js'); 
 var minifier = require('gulp-uglify/minifier');
 var pump = require('pump');
+var imagemin = require('gulp-imagemin');
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync', () => {
   browserSync({
     server: {
       baseDir: 'app'
@@ -18,7 +19,7 @@ gulp.task('browserSync', function() {
   })
 })
 
-gulp.task('sass', function() {
+gulp.task('sass', () => {
   return gulp.src('./css/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass()) // Passes it through a gulp-sass
     .pipe(autoprefixer({
@@ -32,14 +33,22 @@ gulp.task('sass', function() {
     }));
 })
 
+gulp.task('imagemin', () => {
+  gulp.src('./images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./images'))
+});
+
+
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['sass']);
+  gulp.watch('./images/*', ['imagemin']);
   gulp.watch('./*.html', browserSync.reload);
   gulp.watch('./js/**/*.js', browserSync.reload);
 })
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync', 'watch'],
+  runSequence(['sass', 'imagemin', 'browserSync', 'watch'],
     callback
   )
 })

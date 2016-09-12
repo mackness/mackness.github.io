@@ -665,10 +665,12 @@ a:focus {
   padding: 0 0px 0 13px; }
 
 .nav__menu--left {
-  float: right; }
+  float: right;
+  margin: 12px 0 0 0; }
   @media (min-width: 1024px) {
     .nav__menu--left {
-      float: left; } }
+      float: left;
+      margin: 12px 0 13px 0; } }
 
 .nav__menu__item {
   float: left;
