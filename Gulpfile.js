@@ -6,6 +6,9 @@ var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var runSequence = require('run-sequence');
+var uglifyjs = require('uglify-js'); 
+var minifier = require('gulp-uglify/minifier');
+var pump = require('pump');
 
 gulp.task('browserSync', function() {
   browserSync({
@@ -28,6 +31,34 @@ gulp.task('sass', function() {
     }));
 })
 
+gulp.task('compressCSS', function (cb) {
+  var options = {
+    preserveComments: 'license'
+  };
+ 
+  pump([
+      gulp.src('lib/*.js'),
+      minifier(options, uglifyjs),
+      gulp.dest('dist')
+    ],
+    cb
+  );
+});
+
+gulp.task('compressJS', function (cb) {
+  var options = {
+    preserveComments: 'license'
+  };
+ 
+  pump([
+      gulp.src('lib/*.js'),
+      minifier(options, uglifyjs),
+      gulp.dest('dist')
+    ],
+    cb
+  );
+});
+
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['sass']);
   gulp.watch('./*.html', browserSync.reload);
@@ -35,7 +66,7 @@ gulp.task('watch', function() {
 })
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync', 'watch'],
+  runSequence(['sass', 'compressCSS', 'compressJS', 'browserSync', 'watch'],
     callback
   )
 })
