@@ -3,7 +3,7 @@
 	author: @mackness
 */
 
-$primary-color: #f1f1f1;
+$primary-color: #fcfcfc;
 
 $small:  640px;
 $medium: 1024px;
@@ -28,7 +28,8 @@ body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 	box-sizing: border-box;
-	font-size: 16px;
+    font-size: 16px;
+    line-height: 1.55em;
 }
 
 *, *:before, *:after {
