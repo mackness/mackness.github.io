@@ -17,7 +17,17 @@
 			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/">home</a></li>
 			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/resume">resum&eacute;</a></li>
 			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/blog">blog</a></li>
-			<li class="nav__menu__item"><a class="nav__menu__anchor" href="/contact">contact</a></li>
+			<li class="nav__menu__item"><a class="nav__menu__anchor nav__menu__anchor--contact" href="#">contact</a>
+				<form id="contact-form" class="hidden">
+					<div class="contact-form__input-block">
+						<input type="text" class="contact-form__input" placeholder="Name" />
+					</div>
+					<div class="contact-form__input-block">
+						<textarea type="text" class="contact-form__textarea" placeholder="Message"></textarea>
+					</div>
+					<button type="sumbmit" value="send" class="contact-form__submit">send</button>
+				</form>
+			</li>
 		</ul>
 	</div>
 </nav>
@@ -56,11 +66,11 @@
 </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
 <script src="{{site.baseurl}}/js/baffle.min.js"></script>
 <script src="{{site.baseurl}}/js/main.js" async defer></script>
 <script type="text/javascript">
-	baffle('.header__headline').start().reveal(1000, 1000);
-	baffle('.header__sub-headline').start().reveal(2000, 2000);
+	hljs.initHighlightingOnLoad();
 	WebFont.load({
 		google: {
 			families: ['Roboto Mono']
