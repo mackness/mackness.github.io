@@ -10,11 +10,12 @@ var uglifyjs = require('uglify-js');
 var minifier = require('gulp-uglify/minifier');
 var pump = require('pump');
 var imagemin = require('gulp-imagemin');
+var critical = require('critical');
 
 gulp.task('browserSync', () => {
   browserSync({
     server: {
-      baseDir: 'app'
+      baseDir: './'
     }
   })
 })
@@ -37,17 +38,28 @@ gulp.task('imagemin', () => {
   gulp.src('./images/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./images'))
-});
+})
+
+gulp.task('critical', () => {
+  critical.generate({
+      inline: true,
+      base: './',
+      src: 'index.src.html',
+      dest: 'index.html',
+      width: 1408,
+      height: 805
+  });
+})
 
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['sass']);
   gulp.watch('./images/*', ['imagemin']);
-  gulp.watch('./*.html', browserSync.reload);
+  gulp.watch('./*.html', ['critical', browserSync.reload]);
   gulp.watch('./js/**/*.js', browserSync.reload);
 })
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'imagemin', 'browserSync', 'watch'],
+  runSequence(['sass', 'imagemin', 'critical', 'browserSync', 'watch'],
     callback
   )
 })

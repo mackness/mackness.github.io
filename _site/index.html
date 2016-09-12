@@ -3,7 +3,422 @@
 <head>
 	<title>Mack Solomon - Front-end developer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style type="text/css">
+		html {
+		  font-family: sans-serif;
+		  /* 1 */
+		  -ms-text-size-adjust: 100%;
+		  /* 2 */
+		  -webkit-text-size-adjust: 100%;
+		  /* 2 */
+		}
+
+		body {
+		  margin: 0;
+		}
+
+		header,
+		nav,
+		section {
+		  /* 1 */
+		  display: block;
+		}
+
+		a {
+		  background-color: transparent;
+		  /* 1 */
+		  -webkit-text-decoration-skip: objects;
+		  /* 2 */
+		}
+
+		h1 {
+		  font-size: 2em;
+		  margin: 0.67em 0;
+		}
+
+		img {
+		  border-style: none;
+		}
+
+		button,
+		input,
+		textarea {
+		  font: inherit;
+		  /* 1 */
+		  margin: 0;
+		  /* 2 */
+		}
+
+		button,
+		input {
+		  /* 1 */
+		  overflow: visible;
+		}
+
+		button {
+		  /* 1 */
+		  text-transform: none;
+		}
+
+		button {
+		  -webkit-appearance: button;
+		  /* 2 */
+		}
+
+		button::-moz-focus-inner {
+		  border-style: none;
+		  padding: 0;
+		}
+
+		button:-moz-focusring {
+		  outline: 1px dotted ButtonText;
+		}
+
+		textarea {
+		  overflow: auto;
+		}
+
+		::-webkit-input-placeholder {
+		  color: inherit;
+		  opacity: 0.54;
+		}
+
+		::-webkit-file-upload-button {
+		  -webkit-appearance: button;
+		  /* 1 */
+		  font: inherit;
+		  /* 2 */
+		}
+
+		.timeline {
+		  max-width: 1100px;
+		  padding: 0 5px;
+		  display: block;
+		  margin: 25px auto 0 auto;
+		  overflow: hidden;
+		  position: relative;
+		  padding-bottom: 115px;
+		}
+
+		@media (min-width: 1024px) {
+		  .timeline {
+		    margin: 45px auto 0 auto;
+		  }
+		}
+
+		.timeline-block {
+		  width: 100%;
+		  overflow: hidden;
+		  display: block;
+		}
+
+		.timeline__stem {
+		  top: 0;
+		  bottom: 0;
+		  left: 5px;
+		  width: 4px;
+		  display: block;
+		  background-color: black;
+		  position: absolute;
+		}
+
+		@media (min-width: 1024px) {
+		  .timeline__stem {
+		    left: 50%;
+		    transform: translateX(-50%);
+		  }
+		}
+
+		.timeline__item {
+		  width: calc(100% - 30px);
+		  position: relative;
+		  padding: 10px 15px;
+		  margin: 0 0 15px 0;
+		  background-color: #fcfcfc;
+		  box-shadow: inset 0px 0px 1px #ccc;
+		}
+
+		@media (min-width: 1024px) {
+		  .timeline__item {
+		    width: calc(50% - 50px);
+		    margin: 0 0 0 0;
+		  }
+		}
+
+		.timeline__item__checklist li a {
+		  display: block;
+		  padding-top: 4px;
+		  padding-bottom: 4px;
+		}
+
+		@media (min-width: 1024px) {
+		  .timeline__item__checklist li a {
+		    padding-top: 0;
+		    padding-bottom: 0;
+		  }
+		}
+
+		.timeline__item--left {
+		  float: right;
+		}
+
+		.timeline__item--left:before {
+		  content: " ";
+		  top: 0;
+		  left: -50px;
+		  right: auto;
+		  height: 4px;
+		  width: 50px;
+		  background-color: black;
+		  position: absolute;
+		}
+
+		@media (min-width: 1024px) {
+		  .timeline__item--left {
+		    float: left;
+		  }
+
+		  .timeline__item--left:before {
+		    right: -50px;
+		    left: auto;
+		  }
+		}
+
+		.timeline__item--right {
+		  float: right;
+		}
+
+		.timeline__item--right:before {
+		  content: " ";
+		  top: 0;
+		  left: -50px;
+		  height: 4px;
+		  width: 50px;
+		  background-color: black;
+		  position: absolute;
+		}
+
+		.timeline__item__title {
+		  font-size: 18px;
+		  margin-top: 35px;
+		  display: block;
+		  font-weight: bold;
+		}
+
+		.timeline__item__date {
+		  float: right;
+		  color: white;
+		  top: 0;
+		  position: absolute;
+		  background-color: black;
+		  padding: 3px 7px;
+		}
+
+		.timeline__item__date--right {
+		  left: 0;
+		}
+
+		.timeline__item__date--left {
+		  right: auto;
+		  left: 0;
+		}
+
+		@media (min-width: 1024px) {
+		  .timeline__item__date--left {
+		    right: 0;
+		    left: auto;
+		  }
+		}
+
+		#contact-form {
+		  position: absolute;
+		  width: 280px;
+		  right: 0;
+		  background: #fcfcfc;
+		  border: solid 1px #ccc;
+		  padding: 10px;
+		  top: 46px;
+		  z-index: 1000;
+		}
+
+		.contact-form__submit {
+		  width: 100%;
+		}
+
+		textarea {
+		  min-height: 110px;
+		}
+
+		input,
+		textarea {
+		  -webkit-appearance: none;
+		  -moz-appearance: none;
+		  border-radius: 0;
+		  background-color: #FFFFFF;
+		  border-style: solid;
+		  border-width: 1px;
+		  border-color: #cccccc;
+		  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+		  color: #444444;
+		  display: block;
+		  font-family: inherit;
+		  font-size: 0.77778rem;
+		  height: 2.05556rem;
+		  margin: 0 0 0.88889rem 0;
+		  padding: 0.44444rem;
+		  width: 100%;
+		  box-sizing: border-box;
+		}
+
+		html {
+		  box-sizing: border-box;
+		}
+
+		body {
+		  margin: 0;
+		  padding: 0;
+		  font-family: 'Roboto Mono', arial;
+		  -ms-text-size-adjust: 100%;
+		  -webkit-text-size-adjust: 100%;
+		  box-sizing: border-box;
+		  font-size: 16px;
+		  line-height: 1.55em;
+		}
+
+		*,
+		*:before,
+		*:after {
+		  box-sizing: inherit;
+		}
+
+		.nav:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		.hidden {
+		  display: none;
+		  visibility: hidden;
+		}
+
+		a {
+		  text-decoration: none;
+		  color: #008F00;
+		}
+
+		.header {
+		  padding-top: 10px;
+		}
+
+		.header__headline {
+		  width: 100%;
+		  text-align: center;
+		  margin: 30px 0 10px 0;
+		  padding: 0 20px 0 20px;
+		}
+
+		.header__headline--logo {
+		  margin: 3px 0 10px 0;
+		}
+
+		.header__sub-headline {
+		  width: 100%;
+		  text-align: center;
+		  display: block;
+		}
+
+		.logo {
+		  width: 150px;
+		  display: block;
+		  margin: 10px auto 0px auto;
+		  position: relative;
+		}
+
+		.glasses {
+		  width: 100%;
+		  text-align: center;
+		  position: absolute;
+		  top: 49px;
+		  left: 0;
+		  z-index: 100;
+		  opacity: 1;
+		}
+
+		.glasses__image {
+		  opacity: 1;
+		}
+
+		.glasses__image {
+		  max-width: 110px;
+		}
+
+		.logo__image {
+		  width: 120px;
+		  height: 120px;
+		  display: block;
+		  margin: 0 auto;
+		  position: relative;
+		  left: -2px;
+		}
+
+		.nav {
+		  background-color: #fcfcfc;
+		  box-shadow: inset 0px 0px 1px #ccc;
+		}
+
+		.nav__inner {
+		  max-width: 1100px;
+		  margin: 0 auto;
+		  display: block;
+		}
+
+		.nav__menu {
+		  list-style: none;
+		  float: right;
+		  margin: 12px 0 13px 0;
+		  padding: 0 0px 0 13px;
+		}
+
+		.nav__menu--left {
+		  float: right;
+		  margin: 12px 0 0 0;
+		}
+
+		@media (min-width: 1024px) {
+		  .nav__menu--left {
+		    float: left;
+		    margin: 12px 0 13px 0;
+		  }
+		}
+
+		.nav__menu__item {
+		  float: left;
+		  margin-right: 8px;
+		  margin-right: 13px;
+		  position: relative;
+		}
+
+		.content {
+		  max-width: 1100px;
+		  padding: 0 7px;
+		  display: block;
+		  margin: 25px auto 0 auto;
+		  overflow: hidden;
+		  position: relative;
+		  padding-bottom: 115px;
+		}
+
+		@media (min-width: 1024px) {
+		  .content {
+		    margin: 45px auto 0 auto;
+		  }
+		}
+
+	</style>
+	<link rel="preload" type="text/css" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" type="text/css" href="css/main.css"></noscript>
+	<script>!function(e){"use strict";var t=function(t,n,r){function o(e){return i.body?e():void setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
 </head>
 <body class="home">
 <nav class="nav">
@@ -20,7 +435,7 @@
 			<li class="nav__menu__item"><a class="nav__menu__anchor nav__menu__anchor--contact" href="/contact">contact</a>
 				<form id="contact-form" class="hidden">
 					<div class="contact-form__input-block">
-						<input type="text" class="contact-form__input" placeholder="Name" />
+						<input type="text" class="contact-form__input" placeholder="Name">
 					</div>
 					<div class="contact-form__input-block">
 						<textarea type="text" class="contact-form__textarea" placeholder="Message"></textarea>
@@ -33,9 +448,9 @@
 </nav>
 <header class="header">
 	<div class="logo">
-		<img class="logo__image" src="./images/face.png" />
+		<img class="logo__image" src="./images/face.png">
 		<div class="glasses">
-			<img class="glasses__image" src="./images/glasses.png" />
+			<img class="glasses__image" src="./images/glasses.png">
 		</div>
 	</div>
 	<h1 class="header__headline header__headline--logo">Mack Solomon</h1>
@@ -101,10 +516,10 @@
 			<div class="timeline__item__date timeline__item__date--right">November 2015</div>
 			<h3 class="timeline__item__title">Kardashian Websites</h3>
 			<p class="timeline__item__description">
-			<p class="timeline__item__description link-group">(<a href="https://www.kimkardashianwest.com/" class="link-group__item">Kim</a>, <a href="https://www.khloewithak.com/" class="link-group__item">Khloe</a>, <a href="https://www.kourtneykardashian.com/" class="link-group__item">Kourtney</a>, <a href="https://www.thekyliejenner.com/" class="link-group__item">Kylie</a>, <a href="https://www.kendallj.com/" class="link-group__item">Kendall</a>)</p>
+			</p><p class="timeline__item__description link-group">(<a href="https://www.kimkardashianwest.com/" class="link-group__item">Kim</a>, <a href="https://www.khloewithak.com/" class="link-group__item">Khloe</a>, <a href="https://www.kourtneykardashian.com/" class="link-group__item">Kourtney</a>, <a href="https://www.thekyliejenner.com/" class="link-group__item">Kylie</a>, <a href="https://www.kendallj.com/" class="link-group__item">Kendall</a>)</p>
 			I helped build front end framework that's used by all the Kardashian websites.
 			The framework looseley adheres to <a href="http://atomicdesign.bradfrost.com/">Atomic</a> design principals. It consists of reusable templates, template parts, components, and JS functionality. The overall goal was to build a highly scalable and performant system optimized for mobile. We accomplished this though rigorous pre launch benchmark testing and ongoing post launch performance monitoring.
-			</p>
+			<p></p>
 			<ul class="timeline__item__checklist">
 				<li><a href="https://github.com/gulpjs/gulp">python</a></li>
 				<li><a href="https://github.com/gulpjs/gulp">django</a></li>
