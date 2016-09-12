@@ -45,6 +45,7 @@ permalink: /resume/
 * functional programming paradigms
 * elm
 * mithril
+* desktop apps with electron
 * aws
 * linux systems
 
