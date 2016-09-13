@@ -34,6 +34,8 @@ permalink: /resume/
 	* MongoDB
 	* Firebase 
 	* CouchDB
+	* IndexedDB
+	* LocalStorage
 * RESTful API Architecture
 * UI / UX design
 * Interface design

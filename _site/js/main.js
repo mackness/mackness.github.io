@@ -6,10 +6,6 @@ var App = {
 			"name" : document.querySelector('.contact-form__input').value ,
 			"message" : document.querySelector('.contact-form__textarea').value
 		}
-		// var xhr = new XMLHttpRequest();
-		// xhr.open("POST", "https://e8h533pg98.execute-api.us-west-2.amazonaws.com/dev/mailer", true);
-		// xhr.setRequestHeader("Content-type", "application/json");
-		// xhr.send(params);
 		function xdr(url, method, data, callback, errback) {
 		    var req;
 		    
@@ -22,7 +18,7 @@ var App = {
 		            req.onreadystatechange = function() {
 		                if (req.readyState === 4) {
 		                    if (req.status >= 200 && req.status < 400) {
-		                        callback(req.responseText);
+		                        callback('response text',req.responseText);
 		                    } else {
 		                        errback(new Error('Response returned with non-OK status'));
 		                    }
