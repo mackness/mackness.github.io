@@ -31,7 +31,7 @@ var App = {
 				this.toggleForm();
 				form.reset();
 				submit.innerHTML = 'Submit'
-			}.bind(this), 2000)
+			}.bind(this), 1750)
 		}.bind(this), function(err) {
 			console.error('that\'s an error ):', err)
 		})
