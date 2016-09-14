@@ -6,11 +6,8 @@
 	<style type="text/css">
 		html {
 		  font-family: sans-serif;
-		  /* 1 */
 		  -ms-text-size-adjust: 100%;
-		  /* 2 */
 		  -webkit-text-size-adjust: 100%;
-		  /* 2 */
 		}
 
 		body {
@@ -20,15 +17,12 @@
 		header,
 		nav,
 		section {
-		  /* 1 */
 		  display: block;
 		}
 
 		a {
 		  background-color: transparent;
-		  /* 1 */
 		  -webkit-text-decoration-skip: objects;
-		  /* 2 */
 		}
 
 		h1 {
@@ -44,25 +38,20 @@
 		input,
 		textarea {
 		  font: inherit;
-		  /* 1 */
 		  margin: 0;
-		  /* 2 */
 		}
 
 		button,
 		input {
-		  /* 1 */
 		  overflow: visible;
 		}
 
 		button {
-		  /* 1 */
 		  text-transform: none;
 		}
 
 		button {
 		  -webkit-appearance: button;
-		  /* 2 */
 		}
 
 		button::-moz-focus-inner {
@@ -85,9 +74,7 @@
 
 		::-webkit-file-upload-button {
 		  -webkit-appearance: button;
-		  /* 1 */
 		  font: inherit;
-		  /* 2 */
 		}
 
 		.timeline {
@@ -259,7 +246,7 @@
 		  border-style: solid;
 		  border-width: 1px;
 		  border-color: #cccccc;
-		  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+		  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 		  color: #444444;
 		  display: block;
 		  font-family: inherit;
@@ -386,7 +373,7 @@
 		  margin: 12px 0 0 0;
 		}
 
-		@media (min-width: 1024px) {
+		@media (min-width: 640px) {
 		  .nav__menu--left {
 		    float: left;
 		    margin: 12px 0 13px 0;
@@ -439,7 +426,7 @@
 						<input type="text" class="contact-form__input contact-form__input--name" placeholder="Name" required>
 					</div>
 					<div class="contact-form__input-block">
-						<input type="text" class="contact-form__input contact-form__input--email" placeholder="Email" required>
+						<input type="email" class="contact-form__input contact-form__input--email" placeholder="Email" required>
 					</div>
 					<div class="contact-form__input-block">
 						<textarea type="text" class="contact-form__textarea" placeholder="Message" required></textarea>

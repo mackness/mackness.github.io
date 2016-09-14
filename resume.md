@@ -51,6 +51,8 @@ permalink: /resume/
 * desktop apps with electron
 * aws
 * linux systems
+* network security
+* bitcoin
 
 ###  Employment History:
 

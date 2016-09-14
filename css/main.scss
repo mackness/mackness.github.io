@@ -145,7 +145,7 @@ a:focus {
 .nav__menu--left {
 	float: right;
 	margin: 12px 0 0 0;
-	@media (min-width: $medium) {
+	@media (min-width: $small) {
 		float: left;
 		margin: 12px 0 13px 0;
 	}
