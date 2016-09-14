@@ -1,10 +1,18 @@
 
 var App = {
 	handleFormSubmission: function(data) {
+
+		var data = {
+			"name" : document.querySelector('.contact-form__input--name').value,
+			"email" : document.querySelector('.contact-form__input--email').value,
+			"message" : document.querySelector('.contact-form__textarea').value
+		}
+
 		function req(url, data, callback, errback) {
 			var request = new XMLHttpRequest();
 			request.open('POST', url, true);
 			request.setRequestHeader('Content-Type', 'application/json');
+			
 			request.send(JSON.stringify(data));
 		}
 
@@ -28,16 +36,9 @@ var App = {
 
 		document.querySelector('#contact-form').addEventListener('submit', function(event) {
 			event.preventDefault();
-			var data = {
-				"name" : document.querySelector('.contact-form__input--name').value,
-				"email" : document.querySelector('.contact-form__input--email').value,
-				"message" : document.querySelector('.contact-form__textarea').value
-			}
-			this.handleFormSubmission(data);
+			this.handleFormSubmission();
 		}.bind(this))
 	}
 }
 
-window.onload = App.init(
-
-)
+window.onload = App.init()
