@@ -50,6 +50,7 @@ var App = {
 		submit = elements.submit;
 
 		formTrigger.addEventListener('click', function(event) {
+			event.stopPropagation();
 			event.preventDefault();
 			this.toggleForm();
 		}.bind(this));
@@ -58,6 +59,16 @@ var App = {
 			event.preventDefault();
 			this.handleFormSubmission();
 		}.bind(this))
+
+		form.addEventListener('click', function(event) {
+			event.stopPropagation();
+		})
+
+		document.body.addEventListener('click', function() {
+			if (!form.classList.contains('hidden')) {
+				form.classList.add('hidden')
+			}
+		})
 	}
 }
 
