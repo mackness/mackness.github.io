@@ -6,8 +6,8 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Sep 2016 14:47:42 -0700</pubDate>
-    <lastBuildDate>Thu, 15 Sep 2016 14:47:42 -0700</lastBuildDate>
+    <pubDate>Thu, 15 Sep 2016 20:48:17 -0700</pubDate>
+    <lastBuildDate>Thu, 15 Sep 2016 20:48:17 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -22,7 +22,7 @@
 
 &lt;p&gt;3) Then click the create bucket button at the top left corner of the page and enter a bucket name. Bucket name needs to be unique (names are shared by all users of the system).&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Great, we created a bucket.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Great, we’ve created a bucket.&lt;/p&gt;
 
 &lt;h3 id=&quot;configure-git-deployment-using-git-s3httpsgithubcomschicklinggit-s3&quot;&gt;Configure GIT deployment using &lt;a href=&quot;https://github.com/schickling/git-s3&quot;&gt;Git-s3&lt;/a&gt;&lt;/h3&gt;
 
@@ -46,7 +46,7 @@ $ mv composer.phar /usr/local/bin/composer
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Got errors, &lt;a href=&quot;https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#troubleshooting&quot;&gt;try this&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Errors? &lt;a href=&quot;https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#troubleshooting&quot;&gt;try this&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Awesome so at this point we have Git-S3 installed and ready to use, so let’s give it a shot by cd&lt;/p&gt;
 

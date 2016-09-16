@@ -15,7 +15,7 @@ Let's walk thought he process of deploying static code to an s3 bucket with git!
 
 3) Then click the create bucket button at the top left corner of the page and enter a bucket name. Bucket name needs to be unique (names are shared by all users of the system).
 
-**Great, we created a bucket.**
+Great, we've created a bucket.
 
 ### Configure GIT deployment using [Git-s3](https://github.com/schickling/git-s3)
 
@@ -39,7 +39,7 @@ PATH=$HOME/.composer/vendor/bin:$PATH
 composer global require schickling/git-s3:dev-master
 ```
 
-Got errors, [try this](https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#troubleshooting)
+Errors? [try this](https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#troubleshooting)
 
 Awesome so at this point we have Git-S3 installed and ready to use, so let's give it a shot by cd
 
