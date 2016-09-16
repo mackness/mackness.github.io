@@ -15,8 +15,9 @@ Let's walk thought he process of deploying static code to an S3 bucket with git!
 4. Then click the properties button in the top right corner of the screen. Under static website hosting choose enable static hosting.
 
 ## Deployment with [Git-s3](https://github.com/schickling/git-s3)
-Git-s3 relies on [Composer](https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md) as a dependency management tool (unfortunately, at the time of writing you can't install it with brew, [see this](https://github.com/schickling/git-s3#coming-soon)). So lets install 
-and configure that with these commands if you're on a Mac ([windows install](https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#installation-on-windows)):
+
+Unfortunately at the time of writing you can't install Git-S3 [with brew](https://github.com/schickling/git-s3#coming-soon).
+So we'll use [Composer](https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md):
 
 #### Download Composer
 {% highlight bash %}

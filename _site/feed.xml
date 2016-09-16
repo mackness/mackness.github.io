@@ -6,8 +6,8 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Sep 2016 10:46:34 -0700</pubDate>
-    <lastBuildDate>Fri, 16 Sep 2016 10:46:34 -0700</lastBuildDate>
+    <pubDate>Fri, 16 Sep 2016 10:59:26 -0700</pubDate>
+    <lastBuildDate>Fri, 16 Sep 2016 10:59:26 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -24,8 +24,9 @@
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;deployment-with-git-s3httpsgithubcomschicklinggit-s3&quot;&gt;Deployment with &lt;a href=&quot;https://github.com/schickling/git-s3&quot;&gt;Git-s3&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Git-s3 relies on &lt;a href=&quot;https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md&quot;&gt;Composer&lt;/a&gt; as a dependency management tool (unfortunately, at the time of writing you can’t install it with brew, &lt;a href=&quot;https://github.com/schickling/git-s3#coming-soon&quot;&gt;see this&lt;/a&gt;). So lets install 
-and configure that with these commands if you’re on a Mac (&lt;a href=&quot;https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#installation-on-windows&quot;&gt;windows install&lt;/a&gt;):&lt;/p&gt;
+
+&lt;p&gt;Unfortunately at the time of writing you can’t install Git-S3 &lt;a href=&quot;https://github.com/schickling/git-s3#coming-soon&quot;&gt;with brew&lt;/a&gt;.
+So we’ll use &lt;a href=&quot;https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md&quot;&gt;Composer&lt;/a&gt;:&lt;/p&gt;
 
 &lt;h4 id=&quot;download-composer&quot;&gt;Download Composer&lt;/h4&gt;
 
