@@ -3,7 +3,7 @@
 	color: #ca2657;
     background: #fcfcfc;
     border: solid 1px #e1e1e8;
-    padding: 2px 20px;
+    padding: 2px 4px;
     border-radius: 2px;
 }
 
@@ -15,15 +15,18 @@ XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
 
 */
 
-/*.hljs {
+.highlight {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
   background: $primary-color;
   box-shadow: inset 0px 0px 1px #ccc;
   color: black;
+  margin: 0;
+  width: 100%;
+  padding: 0 20px;
 }
-*/
+
 .hljs-comment,
 .hljs-quote {
   color: #006a00;
