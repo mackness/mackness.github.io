@@ -13,6 +13,7 @@ Let's walk thought he process of deploying static code to an S3 bucket with git!
 2. Then click [S3](https://console.aws.amazon.com/s3/) under storage &amp; content delivery.
 3. Then click the create bucket button at the top left corner of the page and enter a bucket name. Bucket name needs to be unique (names are shared by all users of the system).
 4. Then click the properties button in the top right corner of the screen. Under static website hosting choose enable static hosting.
+5. Specify an index and error document.
 
 ## Deployment with [Git-s3](https://github.com/schickling/git-s3)
 
@@ -38,7 +39,7 @@ composer global require schickling/git-s3:dev-master
 
 Errors? [try this](https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#troubleshooting)
 
-Awesome so at this point we have Git-S3 installed but before we can use it we're going to need an IAM role.
+Awesome, so at this point we have Git-S3 installed but before we can use it we're going to need an IAM role.
 
 #### Create an IAM role 
 
@@ -62,7 +63,7 @@ Then run
 git-s3 configure
 {% endhighlight %}
 
-It will prompt you for some info. My configuration looks like this:
+It will prompt you for some info. Your configuration will look something like this:
 
 * key: key_id
 * secret: secret_access_key
@@ -71,7 +72,7 @@ It will prompt you for some info. My configuration looks like this:
 * path: ./
 
 When the config successfully finishes you're ready to deploy code! Git-s3 will only deploy 
-recently changed files so commit some code and run
+recently changed files so commit some code and run:
 
 {% highlight bash %}
 git-s3 deploy

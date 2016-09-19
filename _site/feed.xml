@@ -6,8 +6,8 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 16 Sep 2016 10:59:26 -0700</pubDate>
-    <lastBuildDate>Fri, 16 Sep 2016 10:59:26 -0700</lastBuildDate>
+    <pubDate>Fri, 16 Sep 2016 14:41:40 -0700</pubDate>
+    <lastBuildDate>Fri, 16 Sep 2016 14:41:40 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -21,6 +21,7 @@
   &lt;li&gt;Then click &lt;a href=&quot;https://console.aws.amazon.com/s3/&quot;&gt;S3&lt;/a&gt; under storage &amp;amp; content delivery.&lt;/li&gt;
   &lt;li&gt;Then click the create bucket button at the top left corner of the page and enter a bucket name. Bucket name needs to be unique (names are shared by all users of the system).&lt;/li&gt;
   &lt;li&gt;Then click the properties button in the top right corner of the screen. Under static website hosting choose enable static hosting.&lt;/li&gt;
+  &lt;li&gt;Specify an index and error document.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;deployment-with-git-s3httpsgithubcomschicklinggit-s3&quot;&gt;Deployment with &lt;a href=&quot;https://github.com/schickling/git-s3&quot;&gt;Git-s3&lt;/a&gt;&lt;/h2&gt;
@@ -44,7 +45,7 @@ So we’ll use &lt;a href=&quot;https://github.com/schickling/git-s3/blob/master
 
 &lt;p&gt;Errors? &lt;a href=&quot;https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#troubleshooting&quot;&gt;try this&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Awesome so at this point we have Git-S3 installed but before we can use it we’re going to need an IAM role.&lt;/p&gt;
+&lt;p&gt;Awesome, so at this point we have Git-S3 installed but before we can use it we’re going to need an IAM role.&lt;/p&gt;
 
 &lt;h4 id=&quot;create-an-iam-role&quot;&gt;Create an IAM role&lt;/h4&gt;
 
@@ -66,7 +67,7 @@ project and initialize a git repo if one doesn’t already exist.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git-s3 configure&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;It will prompt you for some info. My configuration looks like this:&lt;/p&gt;
+&lt;p&gt;It will prompt you for some info. Your configuration will look something like this:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;key: key_id&lt;/li&gt;
@@ -77,7 +78,7 @@ project and initialize a git repo if one doesn’t already exist.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;When the config successfully finishes you’re ready to deploy code! Git-s3 will only deploy 
-recently changed files so commit some code and run&lt;/p&gt;
+recently changed files so commit some code and run:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git-s3 deploy&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -95,19 +96,29 @@ recently changed files so commit some code and run&lt;/p&gt;
     
       <item>
         <title>Why I want to write a blog</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <description>&lt;p&gt;A tool to examine my own learning&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;a reference for old ideas&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;often find myself needing to reference old code snippets or patterns and maybe other people can benefit from them&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;something that motivates me to keep learning&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;instructional articles to help others learn&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The technical landscape for front end devs changes constantly. It seems like every week there’s a trendy new 
+JS framework that we have to learn and if we don’t we’re somehow falling behind. That’s clearly not the case.
+Just because it’s new does not necessarily mean it’s the best tool for the job. However, I think it’s important to 
+investigate new popular frameworks so you can make an educated determination if it’s the best tool for your use case. This 
+means that we as front end folk have to be able to learn new things effectively and quickly. This can often be hard 
+to do given there’s no syllabus or standardized structured curriculum for Mithril. I see a blog as a way to organize my thoughts 
+on a subject&lt;/p&gt;
+
+&lt;p&gt;If you’re a font end developer you’re a professional student (ironic since lots of us don’t have a formal college education).
+What I mean is that our field is in a perpetual state of growth and flux. We will constantly have to adapt and learn new things until 
+the end of our careers. I look at a blog as a way to analyze and document my learning. It’s a tool that forces me to take an honest and 
+critical look at my learning style and approach.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 07 Sep 2016 20:57:02 -0700</pubDate>
