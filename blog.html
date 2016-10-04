@@ -11,11 +11,11 @@ title: Blog
 		{% assign tags_list = site.categories %}  
 		  {% if tags_list.first[0] == null %}
 		    {% for tag in tags_list %} 
-		      <li class="post-list__tags__item"><a href="#{{ tag }}">{{ tag | capitalize }}</a></li>
+		      <li class="post-list__tags__item"><span">{{ tag | capitalize }}</span></li>
 		    {% endfor %}
 		  {% else %}
 		    {% for tag in tags_list %} 
-		      <li class="post-list__tags__item"><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }}</a></li>
+		      <li class="post-list__tags__item"><span>{{ tag[0] | capitalize }}</span></li>
 		    {% endfor %}
 		  {% endif %}
 		{% assign tags_list = nil %}
