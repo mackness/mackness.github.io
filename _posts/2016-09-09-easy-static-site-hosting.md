@@ -2,7 +2,7 @@
 layout: post
 title:  "Easy static site hosting on S3 with GIT deployment!"
 date:   2016-09-08	 20:57:02 -0700
-categories: jekyll update
+categories: aws hosting
 ---
 
 Let's walk thought he process of deploying static code to an S3 bucket with git!

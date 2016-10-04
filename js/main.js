@@ -1,11 +1,16 @@
 
 var App = {
+	
 	handleFormSubmission: function(data) {
 
 		var data = {
-			"name" : name.value,
-			"email" : email.value,
-			"message" : message.value
+			"site_id": "mackness.github.io",
+			"send_to": "macksol@gmail.com",
+			"email_data": {
+				"name" : name.value,
+				"email" : email.value,
+				"message" : message.value
+			} 
 		}
 
 		function req(url, data, cb, eb) {

@@ -6,8 +6,8 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Sep 2016 13:45:44 -0700</pubDate>
-    <lastBuildDate>Mon, 19 Sep 2016 13:45:44 -0700</lastBuildDate>
+    <pubDate>Tue, 04 Oct 2016 15:00:07 -0700</pubDate>
+    <lastBuildDate>Tue, 04 Oct 2016 15:00:07 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -84,13 +84,13 @@ recently changed files so commit some code and run:&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 08 Sep 2016 20:57:02 -0700</pubDate>
-        <link>http://127.0.0.1:4000//jekyll/update/2016/09/08/easy-static-site-hosting.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000//jekyll/update/2016/09/08/easy-static-site-hosting.html</guid>
+        <link>http://127.0.0.1:4000//aws/hosting/2016/09/08/easy-static-site-hosting.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000//aws/hosting/2016/09/08/easy-static-site-hosting.html</guid>
         
         
-        <category>jekyll</category>
+        <category>aws</category>
         
-        <category>update</category>
+        <category>hosting</category>
         
       </item>
     

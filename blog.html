@@ -7,6 +7,19 @@ title: Blog
     {% for post in site.posts %}
       <li>
         <h2 class="post-list__title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h2>
+		<ul class="post-list__tags">
+		{% assign tags_list = site.categories %}  
+		  {% if tags_list.first[0] == null %}
+		    {% for tag in tags_list %} 
+		      <li class="post-list__tags__item"><a href="#{{ tag }}">{{ tag | capitalize }}</a></li>
+		    {% endfor %}
+		  {% else %}
+		    {% for tag in tags_list %} 
+		      <li class="post-list__tags__item"><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }}</a></li>
+		    {% endfor %}
+		  {% endif %}
+		{% assign tags_list = nil %}
+		</ul>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       </li>
     {% endfor %}
