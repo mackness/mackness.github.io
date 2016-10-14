@@ -2,13 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mack's Portfolio</title>
-    <description>I am a web devloper based out of San Francisco, CA.    I love building things for the web. 
+    <description>I am a web devloper based in San Francisco, CA. I love building things for the web. 
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 04 Oct 2016 15:02:49 -0700</pubDate>
-    <lastBuildDate>Tue, 04 Oct 2016 15:02:49 -0700</lastBuildDate>
+    <pubDate>Fri, 14 Oct 2016 13:01:48 -0700</pubDate>
+    <lastBuildDate>Fri, 14 Oct 2016 13:01:48 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>React Reddit Client v.s. Mithril Reddit Client</title>
+        <description>&lt;p&gt;I like React. I like Mithril. I wanted to compare them to figure out which one made me happier. This comparison will not take a scientific approach to measuring performance. Rather, it’s designed to measure general developer happiness. I’ll go over some of the things that made me happy and some of the pain points with both systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;mithril&quot;&gt;Mithril&lt;/h2&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;vXAwAX&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;mackness&quot; data-embed-version=&quot;2&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/mackness/pen/vXAwAX/&quot;&gt;mithril reddit&lt;/a&gt; by mackness (&lt;a href=&quot;http://codepen.io/mackness&quot;&gt;@mackness&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I look at Mithril as a small no frills MVC framework. It seems extremely light and doesn’t feel like there is a ton of magic going on behind the scenes. It makes me nervous when there’s a lot going on in the background that I can’t explain to myself so Mithril’s simplicity is definitely refreshing.&lt;/p&gt;
+
+&lt;p&gt;I’m gonna flat out list pros and cons.&lt;/p&gt;
+
+&lt;h3 id=&quot;pros&quot;&gt;Pros:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mithril has really convenient built in routing and request objects (&lt;a href=&quot;http://mithril.js.org/mithril.request.html&quot;&gt;m.request&lt;/a&gt; and &lt;a href=&quot;http://mithril.js.org/mithril.route.html&quot;&gt;m.route&lt;/a&gt;). It felt great to be able to use those two things without having to install a dependency.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mithril.js.org/mithril.html&quot;&gt;m()&lt;/a&gt; template system is great once you get used to it. Again, out of the box this just works without having to configure a transpiler or add another dependency.&lt;/li&gt;
+  &lt;li&gt;Module structure is really simple. It’s just an object with a controller and view property. Looks like this:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//controller&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//view&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;cons&quot;&gt;Cons:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Small community.&lt;/li&gt;
+  &lt;li&gt;No browser based dev tools :(&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;react&quot;&gt;React&lt;/h2&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;RGJmXV&quot; data-default-tab=&quot;js,result&quot; data-user=&quot;mackness&quot; data-embed-version=&quot;2&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/mackness/pen/RGJmXV/&quot;&gt;react reddit&lt;/a&gt; by mackness (&lt;a href=&quot;http://codepen.io/mackness&quot;&gt;@mackness&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 04 Oct 2016 00:00:00 -0700</pubDate>
+        <link>http://127.0.0.1:4000//mithril/react/webpack/2016/10/04/reddit-client-built-with-mithril.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000//mithril/react/webpack/2016/10/04/reddit-client-built-with-mithril.html</guid>
+        
+        
+        <category>mithril</category>
+        
+        <category>react</category>
+        
+        <category>webpack</category>
+        
+      </item>
     
       <item>
         <title>Easy static site hosting on S3 with GIT deployment!</title>
