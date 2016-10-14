@@ -6,8 +6,8 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 14 Oct 2016 14:11:57 -0700</pubDate>
-    <lastBuildDate>Fri, 14 Oct 2016 14:11:57 -0700</lastBuildDate>
+    <pubDate>Fri, 14 Oct 2016 14:19:14 -0700</pubDate>
+    <lastBuildDate>Fri, 14 Oct 2016 14:19:14 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -77,15 +77,13 @@
 
 </description>
         <pubDate>Tue, 04 Oct 2016 00:00:00 -0700</pubDate>
-        <link>http://127.0.0.1:4000//mithril/react/webpack/2016/10/04/reddit-client-built-with-mithril.html</link>
-        <guid isPermaLink="true">http://127.0.0.1:4000//mithril/react/webpack/2016/10/04/reddit-client-built-with-mithril.html</guid>
+        <link>http://127.0.0.1:4000//mithril/react/2016/10/04/reddit-client-built-with-mithril.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000//mithril/react/2016/10/04/reddit-client-built-with-mithril.html</guid>
         
         
         <category>mithril</category>
         
         <category>react</category>
-        
-        <category>webpack</category>
         
       </item>
     

@@ -2,7 +2,7 @@
 layout: post
 title:  "React Reddit Client v.s. Mithril Reddit Client"
 date:   2016-10-04
-categories: mithril react webpack
+categories: mithril react
 ---
 
 I like React. I like Mithril. I wanted to compare them to figure out which one made me happier. This comparison will not take a scientific approach to measuring performance. Rather, it's designed to measure general developer happiness. I'll go over some of the things that made me happy and some of the pain points with both systems.
