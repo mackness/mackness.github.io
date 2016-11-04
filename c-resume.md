@@ -1,10 +1,6 @@
----
-layout: page
-title: Resume
-permalink: /resume/
----
-
-<a href="https://s3-us-west-1.amazonaws.com/macksol/resume.pdf" target="_blank" download>download resume</a>
+# Mack Solomon
+### Santa Monica
+### 310.405.1257
 
 ###  Skills:
 
@@ -17,23 +13,23 @@ permalink: /resume/
 * Async JavaScript
 * GIT
 * **Build tools**
-	* Grunt
-	* Gulp
-	* Webpack
+    * Grunt
+    * Gulp
+    * Webpack
 * **Templating languages**
-	* Jade
-	* HAML
-	* Handlebars
-	* Django template language
+    * Jade
+    * HAML
+    * Handlebars
+    * Django template language
 * NPM
 * Node
 * React
 * Mithril (aggressively learning)
 * Express
 * **NoSQL databases**
-	* MongoDB
-	* Firebase 
-	* IndexedDB
+    * MongoDB
+    * Firebase 
+    * IndexedDB
 * RESTful API Architecture
 * UI / UX design
 * Interface design
@@ -84,7 +80,7 @@ permalink: /resume/
 
  * Worked with clients to design and develop original websites that were highly optimized for SEO.
  * Designed banner ads and leaderboard along with other results driven marketing material.
- * Designed visually engaging landing pages that encouraged conversions.	
+ * Designed visually engaging landing pages that encouraged conversions.    
  * Developed custom Wordpress themes from scratch in a local WAMP environment. 
  * Learned how to write extremely high quality code that is well commented and easy to understand. 
  * Constantly worked with JQuery / Javascript.
