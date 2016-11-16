@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "resume": "node ./js/resume-converter.js"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.5.4",
     "gulp-useref": "^3.0.4",
+    "markdown-pdf": "^7.0.0",
     "pump": "^1.0.1",
     "run-sequence": "^1.1.2"
   }
