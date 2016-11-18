@@ -6,9 +6,49 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 Nov 2016 09:17:53 -0800</pubDate>
-    <lastBuildDate>Wed, 16 Nov 2016 09:17:53 -0800</lastBuildDate>
+    <pubDate>Fri, 18 Nov 2016 09:24:11 -0800</pubDate>
+    <lastBuildDate>Fri, 18 Nov 2016 09:24:11 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>My Git Aliases</title>
+        <description>&lt;h2 id=&quot;gitconfig&quot;&gt;~ /.gitconfig&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    s &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; status
+    r &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reset
+    &lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; config --get-regexp ^alias&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;.
+    a &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; !git add . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git status
+    aa &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; !git add . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git add -u . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git status
+    ac &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; !git add . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit
+    au &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; !git add -u . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git status
+    acm &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; !git add . &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m
+    c &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit
+    cm &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit -m
+    ca &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit --amend
+    d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff --color-words
+    dh &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff --color-words head
+    l &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;%C&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;yellow&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;%h%Cred%d&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt; %Creset%s%Cblue&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;%cn]&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt; --decorate
+    ld &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;%C&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;yellow&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;%h&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt; %ad%Cred%d&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt; %Creset%s%Cblue&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;%cn]&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt; --decorate --date&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;short
+    lf &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --name-status --oneline
+    lt &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --graph --decorate --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit
+    ll &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --stat --abbrev-commit
+    lld &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --stat --abbrev-commit --date&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;short
+    llt &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --graph --decorate --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit
+    master &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; checkout master
+    spull &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; svn rebase
+    spush &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; svn dcommit
+    tree &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --graph --decorate --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Thu, 17 Nov 2016 19:57:02 -0800</pubDate>
+        <link>http://127.0.0.1:4000//git/2016/11/17/my-git-aliases.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000//git/2016/11/17/my-git-aliases.html</guid>
+        
+        
+        <category>git</category>
+        
+      </item>
     
       <item>
         <title>React Reddit Client v.s. Mithril Reddit Client</title>

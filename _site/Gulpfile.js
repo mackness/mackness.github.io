@@ -12,7 +12,7 @@ var pump = require('pump');
 var imagemin = require('gulp-imagemin');
 var critical = require('critical');
 
-gulp.task('browserSync', () => {
+gulp.task('browserSync', function() {
   browserSync({
     server: {
       baseDir: './'
@@ -20,7 +20,7 @@ gulp.task('browserSync', () => {
   })
 })
 
-gulp.task('sass', () => {
+gulp.task('sass', function() {
   return gulp.src('./css/*.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass()) // Passes it through a gulp-sass
     .pipe(autoprefixer({
@@ -34,13 +34,13 @@ gulp.task('sass', () => {
     }));
 })
 
-gulp.task('imagemin', () => {
+gulp.task('imagemin', function() {
   gulp.src('./images/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./images'))
 })
 
-gulp.task('critical', () => {
+gulp.task('critical', function() {
   critical.generate({
       inline: true,
       base: './',

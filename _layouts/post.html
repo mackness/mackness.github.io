@@ -36,6 +36,9 @@
 </nav>
 <header class="header">
 	<h1 class="header__headline header__headline--post">{{ page.title }}</h1>
+	<p class="date">
+		{{ page.date | date: '%B %d, %Y' }}	
+	</p>
 </header>
 <section class="content post {{page.title|slugify}}">
 
