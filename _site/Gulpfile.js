@@ -53,11 +53,8 @@ gulp.task('critical', function() {
 
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['sass']);
-  gulp.watch('./images/*', ['imagemin']);
-  gulp.watch('./*.html', ['critical', browserSync.reload]);
-  gulp.watch('./js/**/*.js', browserSync.reload);
+  gulp.watch('./index.src.html', ['critical']);
+  gulp.watch('./js/**/*.js');
 })
 
-gulp.task('default', function(callback) {
- 
-})
+
