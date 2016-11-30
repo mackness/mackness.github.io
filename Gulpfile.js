@@ -59,7 +59,5 @@ gulp.task('watch', function() {
 })
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'imagemin', 'critical', 'browserSync', 'watch'],
-    callback
-  )
+ 
 })
