@@ -59,7 +59,19 @@ window.onload = function() {
             context.fillStyle = 'rgb(30, 104, 35)';
           } else if (randInt2 === j) {
             context.fillStyle = 'rgb(140, 198, 101)';
-          } else if (randInt3 + 2 === j) {
+          } else if (randInt3 === j) {
+            context.fillStyle = 'rgb(214, 230, 133)';
+          } else if (randInt1 + 5 === j) {
+            context.fillStyle = 'rgb(30, 104, 35)';
+          } else if (randInt2 + 10 === j) {
+            context.fillStyle = 'rgb(140, 198, 101)';
+          } else if (randInt3 + 15 === j) {
+            context.fillStyle = 'rgb(214, 230, 133)';
+          } else if (randInt1 + 2 === j) {
+            context.fillStyle = 'rgb(30, 104, 35)';
+          } else if (randInt2 + 4 === j) {
+            context.fillStyle = 'rgb(140, 198, 101)';
+          } else if (randInt3 + 6 === j) {
             context.fillStyle = 'rgb(214, 230, 133)';
           } else {
             context.fillStyle = 'rgb(238, 238, 238)';
