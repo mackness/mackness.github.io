@@ -33,7 +33,9 @@ window.onload = function() {
       var cellWidth = 50,
           cellHeight = 50;
 
-      var width = canvas.width = document.querySelector('.commit-animation').clientWidth,
+      var containerWidth = document.querySelector('.commit-animation').clientWidth
+
+      var width = canvas.width = containerWidth,
           height = canvas.height = 100;
 
       context.fillStyle = "rgb(255, 255, 255)";
@@ -41,7 +43,7 @@ window.onload = function() {
       // context.fillStyle = 'rgb(214, 230, 133)';
 
       var rows = 7;
-          cols = 55;
+          cols = Math.floor(containerWidth / 20);
 
       var cellWidth = width / cols - .05,
           cellHeight = height / rows - .2;
