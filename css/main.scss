@@ -19,7 +19,7 @@ $xlarge: 1920px;
 /*@import 'https://fonts.googleapis.com/css?family=Rubik';*/
 
 html {
-  box-sizing: border-box;	
+  box-sizing: border-box;
 }
 
 body {
@@ -194,9 +194,22 @@ a:focus {
 	margin: 10px 0 13px 0;
 }
 
-blockquote {	
+blockquote {
 	border-left: 10px solid black;
 	margin: 0;
 	padding-left: 20px;
+}
+
+.commit-animation {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto -3px auto;
+  overflow: hidden;
+  display: block;
+  border: solid 3px #000;
+}
+
+#canvas {
+  margin-bottom: -5px;
 }
 
