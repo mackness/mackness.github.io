@@ -30,9 +30,6 @@ window.onload = function() {
 
       then = now - (elapsed % fpsInterval);
 
-      var cellWidth = 50,
-          cellHeight = 50;
-
       var containerWidth = document.querySelector('.commit-animation').clientWidth
 
       var width = canvas.width = containerWidth,
@@ -43,7 +40,7 @@ window.onload = function() {
       // context.fillStyle = 'rgb(214, 230, 133)';
 
       var rows = 7;
-          cols = Math.floor(containerWidth / 20);
+          cols = Math.floor(containerWidth / 15);
 
       var cellWidth = width / cols - .05,
           cellHeight = height / rows - .2;
