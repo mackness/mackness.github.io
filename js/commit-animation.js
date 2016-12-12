@@ -48,9 +48,9 @@ window.onload = function() {
       for(var i = 0; i < rows; i++) {
         for(var j = 0; j < cols; j++) {
           context.save()
-          var randInt1 = Math.floor(Math.random() * (54 - 0) + 0)
-          var randInt2 = Math.floor(Math.random() * (54 - 0) + 0)
-          var randInt3 = Math.floor(Math.random() * (54 - 0) + 0)
+          var randInt1 = Math.floor(Math.random() * (77 - 0) + 0)
+          var randInt2 = Math.floor(Math.random() * (77 - 0) + 0)
+          var randInt3 = Math.floor(Math.random() * (77 - 0) + 0)
 
           if (randInt1 === j) {
             context.fillStyle = 'rgb(30, 104, 35)';
