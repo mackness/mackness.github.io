@@ -5,7 +5,7 @@ window.onload = function() {
     stop = false,
     fps, fpsInterval, startTime, now, then, elapsed;
 
-  fps(10)
+  fps(7)
   render(true)
 
   window.addEventListener("resize", render)
