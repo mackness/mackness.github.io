@@ -6,9 +6,56 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Dec 2016 11:28:51 -0800</pubDate>
-    <lastBuildDate>Tue, 13 Dec 2016 11:28:51 -0800</lastBuildDate>
+    <pubDate>Sat, 21 Jan 2017 11:37:42 -0800</pubDate>
+    <lastBuildDate>Sat, 21 Jan 2017 11:37:42 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>My Sublime Settings!</title>
+        <description>&lt;h2 id=&quot;preferencessublime-settings&quot;&gt;~/Preferences.sublime-settings&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;bold_folder_labels&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;color_scheme&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Packages/Agila Theme/Agila Oceanic Next.tmTheme&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;el_capitan_font_default&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;el_capitan_font_helvetica&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;el_capitan_font_helvetica_neue&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;el_capitan_font_san_francisco&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;el_capitan_sidebar_blue_folders&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;fade_fold_buttons&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;font_face&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Menlo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;font_options&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+		&lt;span class=&quot;s2&quot;&gt;&quot;no_round&quot;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;font_size&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;highlight_line&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;ignored_packages&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+		&lt;span class=&quot;s2&quot;&gt;&quot;Vintage&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+		&lt;span class=&quot;s2&quot;&gt;&quot;zz File Icons&quot;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;indent_guide_options&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+		&lt;span class=&quot;s2&quot;&gt;&quot;draw_normal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+		&lt;span class=&quot;s2&quot;&gt;&quot;draw_active&quot;&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;line_padding_bottom&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;line_padding_top&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;theme&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;El Capitan.sublime-theme&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Fri, 20 Jan 2017 19:57:02 -0800</pubDate>
+        <link>http://127.0.0.1:4000//sublime/config/2017/01/20/my-sublime-settings.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000//sublime/config/2017/01/20/my-sublime-settings.html</guid>
+        
+        
+        <category>sublime</category>
+        
+        <category>config</category>
+        
+      </item>
     
       <item>
         <title>My Git Aliases</title>
