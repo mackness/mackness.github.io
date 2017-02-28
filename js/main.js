@@ -30,7 +30,7 @@ var App = {
 			request.send(JSON.stringify(data));
 		}
 
-		req('https://e8h533pg98.execute-api.us-west-2.amazonaws.com/dev/mailer', data, function(res) {
+		req('https://a7zjd97z6l.execute-api.us-west-2.amazonaws.com/prod/send', data, function(res) {
 			submit.innerHTML = 'Got it, thanks!'
 			setTimeout(function() {
 				this.toggleForm();
