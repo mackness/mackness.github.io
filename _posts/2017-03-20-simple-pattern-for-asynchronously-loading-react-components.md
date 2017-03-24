@@ -38,7 +38,7 @@ export default LoadComponent
 
 Two interesting things are happening:
 
-1) We're using `System.import` which tells Webpack to create a separate bundle for the component we're importing and it's dependencies. So at this point we have our primary code bundle and a separate bundle for the imported module and it's dependencies ([code splitting](https://webpack.js.org/guides/code-splitting-import/#components/sidebar/sidebar.jsx)). If you clicked on the link you probably noticed `System.import` got updated to simply `import` but I'm going to use the old syntax because my Babel config doesn't seem to like the new syntax to my knowledge the old syntax is still supported and works the exact same way.
+1) We're using `System.import` which tells Webpack to create a separate bundle for the component we're importing and it's dependencies. At this point we have our primary code bundle and a separate bundle for the imported module and it's dependencies ([code splitting](https://webpack.js.org/guides/code-splitting-import/#components/sidebar/sidebar.jsx)). If you clicked on the link you probably noticed `System.import` got updated to simply `import` but I'm going to use the old syntax because my Babel config doesn't seem to like the new syntax to my knowledge the old syntax is still supported and works the exact same way.
 
 2) In the render method we're returning a function called render and passing in `LoadComponent`'s state as arguments. This pattern is called render props and has proven to be pretty useful in loads of day to day situations. Also gives the component a really nice declarative API so lets check that out:
 
