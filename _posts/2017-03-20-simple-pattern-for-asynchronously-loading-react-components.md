@@ -64,7 +64,7 @@ class App extends React.Component {
             error ? (
               <p>Reload or something...</p>
             ) : (
-              Chart ? <Chart /> : <div>Loading...</div>
+              Chart ? <Chart /> : <p>Loading...</p>
             )
           )}/>
         ) : null}
