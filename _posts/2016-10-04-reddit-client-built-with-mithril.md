@@ -57,7 +57,7 @@ var Component = {
 
 I like Mithril. It's really small and easy to use. If you compare the file size of both libs 145.33kb (React) 19.99kb (Mithril) it's even more impressive what Mithril is capable of right out of the box. I think the file size metric is a really important consideration for a client size library and Mithril is a powerhouse relative to it's file size. This quote from Mithril's docs really stood out for me:
 
->Note also that, despite having a bigger scope, Mithril has a smaller file size than React.
+> Note also that, despite having a bigger scope, Mithril has a smaller file size than React.
 
 At the end of the day I think the most important thing is how comfortable you feel with a particular system and how easy it is for you and your team to manage complexity at scale. I feel really comfortable with React. I've build a couple things with it and I've gotten used to it's idiosyncrasies. I'm sure I could achieve the same level of comfort with Mithril but I would need a set of really convincing reasons to make the switch.
 

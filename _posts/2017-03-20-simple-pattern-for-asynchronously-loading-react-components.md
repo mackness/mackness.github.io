@@ -1,99 +1,84 @@
 ---
 layout: post
 title:  "Simple Pattern for Asynchronously Loading React Components"
-date:   2017-03-20	 20:57:02 -0700
+date:   2017-03-20 16:16:01 -0600
 categories: react patterns
 ---
 
-Let's walk thought he process of deploying static code to an S3 bucket with git!
+Lets load a react component and it's dependencies. Make sure you're using Webpack 2.0+ or none of this will work.
 
-## Create an S3 bucket
+First we will create a component called `LoadComponent` that will be responsible for... loading the component.
 
-1. Log into the aws console by clicking sign into the console button on the [aws homepage](https://aws.amazon.com/).
-2. Then click [S3](https://console.aws.amazon.com/s3/) under storage &amp; content delivery.
-3. Then click the create bucket button at the top left corner of the page and enter a bucket name. Bucket name needs to be unique (names are shared by all users of the system).
-4. Then click the properties button in the top right corner of the screen. Under static website hosting choose enable static hosting.
-5. Specify an index and error document.
 
-## Deployment with [Git-s3](https://github.com/schickling/git-s3)
+{% highlight js %}
+import React from 'react'
 
-Unfortunately at the time of writing you can't install Git-S3 [with brew](https://github.com/schickling/git-s3#coming-soon).
-So we'll use [Composer](https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md):
+class LoadComponent extends React.Component {
+  state = {
+    component: null,
+    error: null
+  }
+  componentWillMount() {
+    System.import(`./components/${this.props.component}`)
+      .then(Component => {
+        this.setState({component:Component.default})
+      })
+      .catch(error => {
+        this.setState({error})
+      })
+  }
+  render() {
+    const {component, error} = this.state
+    return this.props.render(component, error)
+  }
+}
 
-#### Download Composer
-{% highlight bash %}
-$ curl -sS https://getcomposer.org/installer | php
-$ mv composer.phar /usr/local/bin/composer 
+export default LoadComponent
 {% endhighlight %}
 
-#### Add Composer to your path
-find your `.bashrc`, `.bash_profile` or `.zshrc` file and add the following line to it
-{% highlight bash %}
-PATH=$HOME/.composer/vendor/bin:$PATH
+Two interesting things are happening:
+
+1) We're using `System.import` which tells Webpack to create a separate bundle for the component we're importing and it's dependencies. So at this point we have our primary code bundle and a separate bundle for the imported module and it's dependencies ([code splitting](https://webpack.js.org/guides/code-splitting-import/#components/sidebar/sidebar.jsx)). If you clicked on the link you probably noticed `System.import` got updated to simply `import` but I'm going to use the old syntax because my Babel config doesn't seem to like the new syntax to my knowledge the old syntax is still supported and works the exact same way.
+
+2) In the render method we're returning a function called render and passing in `LoadComponent`'s state as arguments. This pattern is called render props and has proven to be pretty useful in loads of day to day situations. Also gives the component a really nice declarative API so lets check that out:
+
+{% highlight js %}
+import React from 'react'
+import LoadComponent from './LoadComponent'
+
+class App extends React.Component {
+  state = {
+    showChart: false
+  }
+  showChart = () => {
+    this.setState({
+      showChart: !this.state.showChart
+    })
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.showChart}>load chart</button>
+        {this.state.showChart ? (
+          <LoadComponent component='Chart.js' render={(Chart, error)=> (
+            error ? (
+              <p>Reload or something...</p>
+            ) : (
+              Chart ? <Chart /> : <div>Loading...</div>
+            )
+          )}/>
+        ) : null}
+      </div>
+    )
+  }
+}
 {% endhighlight %}
 
-#### Install Git-S3
-{% highlight bash %}
-composer global require schickling/git-s3:dev-master
-{% endhighlight %}
-
-Errors? [try this](https://github.com/schickling/git-s3/blob/master/doc/COMPOSER.md#troubleshooting)
-
-Awesome, so at this point we have Git-S3 installed but before we can use it we're going to need an IAM role.
-
-#### Create an IAM role 
-
-1. Go back to the AWS console and click on the [IAM](https://console.aws.amazon.com/iam/home) link in the services menu at the top left of the screen.
-2. Click the users link in the menu on the left.
-3. Then click create new users button at the top left.
-4. Enter a name for the user and click create at the bottom left.
-5. Then click download credentials at the bottom right.
-
-This will download a file called credentials.csv with the secret access key ID and the access key for the user you just created.
-Make sure to store this in a safe off line place. At this point we have all the info we need to configure Git-s3. Go the the root of your 
-project and initialize a git repo if one doesn't already exist.
-
-{% highlight bash %}
-git init
-{% endhighlight %}
-
-Then run
-
-{% highlight bash %}
-git-s3 configure
-{% endhighlight %}
-
-It will prompt you for some info. Your configuration will look something like this:
-
-* key: key_id
-* secret: secret_access_key
-* region: us-west-1
-* bucket: your_bucket_name
-* path: ./
-
-When the config successfully finishes you're ready to deploy code! Git-s3 will only deploy 
-recently changed files so commit some code and run:
-
-{% highlight bash %}
-git-s3 deploy
-{% endhighlight %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+So `LoadComponent` takes two props:
+ 
+ 1) `component` - the name of the component it's responsible for rendering 
+ 
+ 2) `render` - the function that takes 
 
 
 
