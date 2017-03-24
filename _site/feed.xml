@@ -6,8 +6,8 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Mar 2017 22:20:19 -0700</pubDate>
-    <lastBuildDate>Thu, 23 Mar 2017 22:20:19 -0700</lastBuildDate>
+    <pubDate>Thu, 23 Mar 2017 22:30:31 -0700</pubDate>
+    <lastBuildDate>Thu, 23 Mar 2017 22:30:31 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -42,7 +42,7 @@
 
 &lt;p&gt;Two interesting things are happening:&lt;/p&gt;
 
-&lt;p&gt;1) We’re using &lt;code class=&quot;highlighter-rouge&quot;&gt;System.import&lt;/code&gt; which tells Webpack to create a separate bundle for the component we’re importing and it’s dependencies. So at this point we have our primary code bundle and a separate bundle for the imported module and it’s dependencies (&lt;a href=&quot;https://webpack.js.org/guides/code-splitting-import/#components/sidebar/sidebar.jsx&quot;&gt;code splitting&lt;/a&gt;). If you clicked on the link you probably noticed &lt;code class=&quot;highlighter-rouge&quot;&gt;System.import&lt;/code&gt; got updated to simply &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt; but I’m going to use the old syntax because my Babel config doesn’t seem to like the new syntax to my knowledge the old syntax is still supported and works the exact same way.&lt;/p&gt;
+&lt;p&gt;1) We’re using &lt;code class=&quot;highlighter-rouge&quot;&gt;System.import&lt;/code&gt; which tells Webpack to create a separate bundle for the component we’re importing and it’s dependencies. At this point we have our primary code bundle and a separate bundle for the imported module and it’s dependencies (&lt;a href=&quot;https://webpack.js.org/guides/code-splitting-import/#components/sidebar/sidebar.jsx&quot;&gt;code splitting&lt;/a&gt;). If you clicked on the link you probably noticed &lt;code class=&quot;highlighter-rouge&quot;&gt;System.import&lt;/code&gt; got updated to simply &lt;code class=&quot;highlighter-rouge&quot;&gt;import&lt;/code&gt; but I’m going to use the old syntax because my Babel config doesn’t seem to like the new syntax to my knowledge the old syntax is still supported and works the exact same way.&lt;/p&gt;
 
 &lt;p&gt;2) In the render method we’re returning a function called render and passing in &lt;code class=&quot;highlighter-rouge&quot;&gt;LoadComponent&lt;/code&gt;’s state as arguments. This pattern is called render props and has proven to be pretty useful in loads of day to day situations. Also gives the component a really nice declarative API so lets check that out:&lt;/p&gt;
 
@@ -67,7 +67,7 @@
             &lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
               &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Reload&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;            &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-              &lt;span class=&quot;nx&quot;&gt;Chart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Chart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Loading&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+              &lt;span class=&quot;nx&quot;&gt;Chart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Chart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Loading&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;            &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
           &lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
