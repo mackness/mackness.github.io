@@ -74,11 +74,13 @@ class App extends React.Component {
 }
 {% endhighlight %}
 
+Great, now we have a nice reusable declarative component loader.
+
 So `LoadComponent` takes two props:
  
- 1) `component` - the name of the component it's responsible for rendering 
+ 1) `component` - name of the component it's responsible for rendering 
  
- 2) `render` - the function that takes 
+ 2) `render` - a function that renders UI based on `LoadComponent`'s state
 
 
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://127.0.0.1:4000//</link>
     <atom:link href="http://127.0.0.1:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Mar 2017 22:13:51 -0700</pubDate>
-    <lastBuildDate>Thu, 23 Mar 2017 22:13:51 -0700</lastBuildDate>
+    <pubDate>Thu, 23 Mar 2017 22:20:19 -0700</pubDate>
+    <lastBuildDate>Thu, 23 Mar 2017 22:20:19 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -76,11 +76,13 @@
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;Great, now we have a nice reusable declarative component loader.&lt;/p&gt;
+
 &lt;p&gt;So &lt;code class=&quot;highlighter-rouge&quot;&gt;LoadComponent&lt;/code&gt; takes two props:&lt;/p&gt;
 
-&lt;p&gt;1) &lt;code class=&quot;highlighter-rouge&quot;&gt;component&lt;/code&gt; - the name of the component it’s responsible for rendering&lt;/p&gt;
+&lt;p&gt;1) &lt;code class=&quot;highlighter-rouge&quot;&gt;component&lt;/code&gt; - name of the component it’s responsible for rendering&lt;/p&gt;
 
-&lt;p&gt;2) &lt;code class=&quot;highlighter-rouge&quot;&gt;render&lt;/code&gt; - the function that takes&lt;/p&gt;
+&lt;p&gt;2) &lt;code class=&quot;highlighter-rouge&quot;&gt;render&lt;/code&gt; - a function that renders UI based on &lt;code class=&quot;highlighter-rouge&quot;&gt;LoadComponent&lt;/code&gt;’s state&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 20 Mar 2017 15:16:01 -0700</pubDate>
