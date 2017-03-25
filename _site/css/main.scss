@@ -4,7 +4,7 @@
 */
 
 $primary-color: #fcfcfc;
-
+$x-small:  640px;
 $small:  640px;
 $medium: 1024px;
 $large:  1440px;
@@ -72,14 +72,19 @@ a:focus {
 
 .header__headline {
 	width: 100%;
-	text-align: center;
+	text-align: left;
 	margin: 30px auto 10px auto;
 	padding: 0 20px 0 20px;
 	max-width: 900px;
+	font-size: 1.9em;
+	@media (min-width: $small) {
+		font-size: 2em;
+		text-align: center;
+	}
 }
 
 .header__headline--logo {
-	margin: 3px 0 10px 0;
+	margin: 8px auto 9px auto;
 }
 
 .header__sub-headline {
