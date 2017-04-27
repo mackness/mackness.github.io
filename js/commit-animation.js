@@ -8,7 +8,7 @@ window.onload = function() {
   fps(7)
   render(true)
 
-  window.addEventListener("resize", render)
+  window.addEventListener("resize", render);
 
   function fps(fps) {
       fpsInterval = 1000 / fps;
@@ -37,7 +37,6 @@ window.onload = function() {
 
       context.fillStyle = "rgb(255, 255, 255)";
       context.fillRect(0,0,width,height);
-      // context.fillStyle = 'rgb(214, 230, 133)';
 
       var rows = 7;
           cols = Math.floor(containerWidth / 15);

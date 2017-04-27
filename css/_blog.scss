@@ -6,12 +6,18 @@
     padding: 0 20px 0 20px;
 }
 
+.header__headline--blog {
+	padding: 0 30px;
+}
+
 .header__headline--post {
 	line-height: 1.35em;
 }
 
 .post-list__title {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    line-height: 1.15em;
 }
 
 .content.blog {
@@ -61,6 +67,7 @@
     text-align: left;
     color: #8a8a8a;
     padding: 0 20px;
+    margin: 5px 0 0px 0;
 	@media (min-width: $x-small) {
 		text-align: center;
 	}

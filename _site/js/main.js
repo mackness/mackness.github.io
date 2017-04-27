@@ -62,6 +62,7 @@ var App = {
 
 		form.addEventListener('submit', function(event) {
 			event.preventDefault();
+			event.target.querySelector('button').innerHTML = 'Sending...'
 			this.handleFormSubmission();
 		}.bind(this))
 
