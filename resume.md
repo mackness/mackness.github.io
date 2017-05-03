@@ -10,12 +10,17 @@ permalink: /resume/
 
 * HTML
 * CSS
-* Atomic Design Patterns
-* BEM CSS syntax
-* SVG animations
+* JavaScript
 * Modern Javascript Patterns
-* Async JavaScript
+* React
+* Redux
+* ImmutableJS
+* TypeScript
+* Node
+* Express
 * GIT
+* NPM / Yarn
+* RESTful API Architecture
 * **Build tools**
 	* Grunt
 	* Gulp
@@ -24,37 +29,26 @@ permalink: /resume/
 	* Jade
 	* HAML
 	* Handlebars
-	* Django template language
-* NPM
-* Node
-* React
-* Mithril (aggressively learning)
-* Express
 * **NoSQL databases**
 	* MongoDB
 	* Firebase 
-	* IndexedDB
-* RESTful API Architecture
-* UI / UX design
-* Interface design
-* Rapid Prototyping
-* Adobe Illustrator
-* Adobe Photoshop
 
 ###  Interested In:
 
-* functional programming paradigms
-* elm
-* mithril
-* aws
-* linux systems
-* bitcoin
+* Functional programming paradigms
+* Elm
+* Mithril
+* GO
+* Aws
+* Linux systems
+* Docker
+* Bitcoin  / Blockchian
 
 ###  Employment History:
 
-####  [Whalerock Industries](http://www.whalerockindustries.com/)
+####  [eHarmony](http://www.eharmony.com/)
 
-##### Front End Developer (August 2014 ~ Present)
+##### Full Stack Web Developer (Jan 2017 ~ Present)
 
 * Collaborate with the design team to develop high quality responsive interfaces.
 * Developed and converted wireframes into high fidelity functional prototypes.
@@ -63,6 +57,19 @@ permalink: /resume/
 * Communicate with RESTful APIs.
 * Took large scale, ultra high traffic sites from concept to completion.
 * Maintained massive front end codebases in a modular and reusable way.
+* Ensure all of Whalerock's front end code is of the highest possible quality.
+
+####  [Whalerock Industries](http://www.whalerockindustries.com/)
+
+##### Front End Developer (August 2014 ~ Jan 2017)
+
+* Collaborate with the design team to develop high quality responsive interfaces.
+* Developed and converted wireframes into high fidelity functional prototypes.
+* Consistently made important UX decisions.
+* Contributed to our React based admin dashboard called Distillery along with other internal tools.
+* Interact with RESTful APIs.
+* Took large scale, ultra high traffic sites from concept to completion.
+* Designed massive front end codebases in a modular, reusable and maintainable way.
 * Ensure all of Whalerock's front end code is of the highest possible quality.
 
 #### [Vision Internet](http://www.visioninternet.com/)
@@ -90,16 +97,5 @@ permalink: /resume/
  * Constantly worked with JQuery / Javascript.
  * Used development tools to debug websites and work though cross browser compatibility issues.
 
-#### Freelance Work 
-
-##### Web Designer / Developer (December 2011 ~ July 2012)
-
-* Work directly with clients to design and develop personal online solutions.
-* Make sure that every aspect of the website is of the highest possible quality.
-* Extensivly tested websites against various platforms.
-* Maintained great working relationships.
-* Addressed a variety of accessibility concerns.
-* Took the opportunity to work on projects that emphasized JavaScript.
-* Made lots of cool friends.
 
 
