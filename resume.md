@@ -36,12 +36,11 @@ permalink: /resume/
 ###  Interested In:
 
 * Functional programming paradigms
-* Elm
-* Mithril
-* GO
-* Aws
+* [Elm](http://elm-lang.org/)
+* [Mithril](https://mithril.js.org/)
+* [GO](https://golang.org/)
+* AWS
 * Linux systems
-* Docker
 * Bitcoin  / Blockchian
 
 ###  Employment History:
