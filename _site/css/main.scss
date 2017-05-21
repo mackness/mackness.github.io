@@ -86,33 +86,67 @@ a:focus {
 }
 
 .logo {
-    width: 150px;
+    width: 120px;
     height: 120px;
     display: block;
     margin: 10px auto 20px auto;
     position: relative;
 }
 
-.logo:hover .glasses__image {
-	transform: translateY(85%);
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
-.glasses {
-	width: 100%;
-	text-align: center;
+div[class^='logo__orb'], div[class*='logo__orb'] {
+    height:120px;
+	width:120px;
+	display:block;
 	position: absolute;
-    top: 49px;
-    left: 0;
-    z-index: 100;
-    opacity: 1;
+	animation: rotating 2s linear infinite;
 }
 
-.glasses__image {
-	opacity: 1;
+.logo__orb__1 {
+
+	&:before {
+    content: " ";
+    height: 10px;
+    width: 9px;
+    display: block;
+    border-radius: 50%;
+    background: #008F00;
+    top: 50%;
+    position: absolute;
+    margin: -5px 0 0 -8px;
+	}
 }
 
-.glasses__image {
-    max-width: 110px;
+.logo__orb__2 {
+	
 }
 
 .logo__image {
