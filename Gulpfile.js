@@ -10,7 +10,6 @@ var uglifyjs = require('uglify-js');
 var minifier = require('gulp-uglify/minifier');
 var pump = require('pump');
 var imagemin = require('gulp-imagemin');
-var critical = require('critical');
 
 gulp.task('browserSync', function() {
   browserSync({
@@ -40,20 +39,8 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('./images'))
 })
 
-gulp.task('critical', function() {
-  critical.generate({
-      inline: true,
-      base: './',
-      src: 'index.src.html',
-      dest: 'index.html',
-      width: 1408,
-      height: 805
-  });
-})
-
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['sass']);
-  gulp.watch('./index.src.html', ['critical']);
   gulp.watch('./js/**/*.js');
 })
 
