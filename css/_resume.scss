@@ -32,6 +32,6 @@
 .download-resume {
 	display: none;
 	@media (min-width: $medium) {
-		display: block;
+		display: inline-block;
 	}	
 }
