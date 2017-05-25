@@ -1,7 +1,7 @@
 
 .content.resume {
 	max-width: 1100px;
-	padding: 0 35px;
+	padding: 0 30px;
 	display: block;
 	margin: 25px auto 0 auto;
 	overflow: hidden;
@@ -27,4 +27,11 @@
 
 .resume__job__title {
     margin: 0 0 10px 0;
+}
+
+.download-resume {
+	display: none;
+	@media (min-width: $medium) {
+		display: block;
+	}	
 }
