@@ -11,6 +11,7 @@
 * SVG animations
 * Modern Javascript Patterns
 * Async JavaScript
+* Test Driven Development
 * GIT
 * **Build tools**
     * Grunt
