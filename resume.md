@@ -49,14 +49,9 @@ permalink: /resume/
 
 ##### Full Stack Web Developer (Jan 2017 ~ Present)
 
-* Collaborate with the design team to develop high quality responsive interfaces.
-* Developed and converted wireframes into high fidelity functional prototypes.
-* Consistently made pivotal UX decisions.
-* Contributed to our proprietary React based admin panel called Distillery along with other internal tools.
-* Communicate with RESTful APIs.
-* Took large scale, ultra high traffic sites from concept to completion.
-* Maintained massive front end codebases in a modular and reusable way.
-* Ensure all of Whalerock's front end code is of the highest possible quality.
+* Contribute to high traffic front end systems.
+* Write extremeley high quality and maintainable front / backend JavaScript.
+* Quicky develop and deploy business crtitical features while improving and updating leagcy code.
 
 ####  [Whalerock Industries](http://www.whalerockindustries.com/)
 
@@ -64,11 +59,11 @@ permalink: /resume/
 
 * Collaborate with the design team to develop high quality responsive interfaces.
 * Developed and converted wireframes into high fidelity functional prototypes.
-* Consistently made important UX decisions.
+* Made important UX decisions.
 * Contributed to our React based admin dashboard called Distillery along with other internal tools.
 * Interact with RESTful APIs.
 * Took large scale, ultra high traffic sites from concept to completion.
-* Designed massive front end codebases in a modular, reusable and maintainable way.
+* Designed front end codebases in a modular, reusable and maintainable way.
 * Ensure all of Whalerock's front end code is of the highest possible quality.
 
 #### [Vision Internet](http://www.visioninternet.com/)
