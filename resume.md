@@ -41,7 +41,7 @@ permalink: /resume/
 * [GO](https://golang.org/)
 * AWS
 * Linux systems
-* Bitcoin  / Blockchian
+* Cryptocurrencies  / Blockchian
 
 ###  Employment History:
 
