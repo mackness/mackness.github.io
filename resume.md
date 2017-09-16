@@ -39,6 +39,7 @@ permalink: /resume/
 * [Elm](http://elm-lang.org/)
 * [Mithril](https://mithril.js.org/)
 * [GO](https://golang.org/)
+* Python
 * AWS
 * Linux systems
 * Cryptocurrencies  / Blockchian

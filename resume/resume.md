@@ -6,60 +6,60 @@
 
 * HTML
 * CSS
-* Atomic Design Patterns
-* BEM CSS syntax
-* SVG animations
+* JavaScript
 * Modern Javascript Patterns
-* Async JavaScript
-* Test Driven Development
-* GIT
-* **Build tools**
-    * Grunt
-    * Gulp
-    * Webpack
-* **Templating languages**
-    * Jade
-    * HAML
-    * Handlebars
-    * Django template language
-* NPM
-* Node
 * React
-* Mithril (aggressively learning)
+* Redux
+* ImmutableJS
+* TypeScript
+* Node
 * Express
-* **NoSQL databases**
-    * MongoDB
-    * Firebase 
-    * IndexedDB
+* GIT
+* NPM / Yarn
 * RESTful API Architecture
-* UI / UX design
-* Interface design
-* Rapid Prototyping
-* Adobe Illustrator
-* Adobe Photoshop
+* **Build tools**
+	* Grunt
+	* Gulp
+	* Webpack
+* **Templating languages**
+	* Jade
+	* HAML
+	* Handlebars
+* **NoSQL databases**
+	* MongoDB
+	* Firebase 
 
 ###  Interested In:
 
-* functional programming paradigms
-* elm
-* mithril
-* aws
-* linux systems
-* bitcoin
+* Functional programming paradigms
+* [Elm](http://elm-lang.org/)
+* [Mithril](https://mithril.js.org/)
+* [GO](https://golang.org/)
+* AWS
+* Linux systems
+* Cryptocurrencies  / Blockchian
 
 ###  Employment History:
 
+####  [eHarmony](http://www.eharmony.com/)
+
+##### Full Stack Web Developer (Jan 2017 ~ Present)
+
+* Contribute to high traffic front end systems.
+* Write extremeley high quality and maintainable front / backend JavaScript.
+* Quicky develop and deploy business crtitical features while improving and updating leagcy code.
+
 ####  [Whalerock Industries](http://www.whalerockindustries.com/)
 
-##### Front End Developer (August 2014 ~ Present)
+##### Front End Developer (August 2014 ~ Jan 2017)
 
 * Collaborate with the design team to develop high quality responsive interfaces.
 * Developed and converted wireframes into high fidelity functional prototypes.
-* Consistently made pivotal UX decisions.
-* Contributed to our proprietary React based admin panel called Distillery along with other internal tools.
-* Communicate with RESTful APIs.
+* Made important UX decisions.
+* Contributed to our React based admin dashboard called Distillery along with other internal tools.
+* Interact with RESTful APIs.
 * Took large scale, ultra high traffic sites from concept to completion.
-* Maintained massive front end codebases in a modular and reusable way.
+* Designed front end codebases in a modular, reusable and maintainable way.
 * Ensure all of Whalerock's front end code is of the highest possible quality.
 
 #### [Vision Internet](http://www.visioninternet.com/)
@@ -81,22 +81,11 @@
 
  * Worked with clients to design and develop original websites that were highly optimized for SEO.
  * Designed banner ads and leaderboard along with other results driven marketing material.
- * Designed visually engaging landing pages that encouraged conversions.    
+ * Designed visually engaging landing pages that encouraged conversions.	
  * Developed custom Wordpress themes from scratch in a local WAMP environment. 
  * Learned how to write extremely high quality code that is well commented and easy to understand. 
  * Constantly worked with JQuery / Javascript.
  * Used development tools to debug websites and work though cross browser compatibility issues.
 
-#### Freelance Work 
-
-##### Web Designer / Developer (December 2011 ~ July 2012)
-
-* Work directly with clients to design and develop personal online solutions.
-* Make sure that every aspect of the website is of the highest possible quality.
-* Extensivly tested websites against various platforms.
-* Maintained great working relationships.
-* Addressed a variety of accessibility concerns.
-* Took the opportunity to work on projects that emphasized JavaScript.
-* Made lots of cool friends.
 
 
