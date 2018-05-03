@@ -51,7 +51,7 @@ permalink: /resume/
 ##### Full Stack Web Developer (Jan 2017 ~ Present)
 
 * Write and maintain high quality frontend / backend JavaScript.
-* Contribute to en ecosystem of internal modules cross functional modules and components.
+* Contribute to en ecosystem of internal cross functional modules and components.
 * Write high quality and meaningful unit tests that expose bugs and potential issues.
 * Contribute to business critical systems such as the communication web app and the registration module.
 * Diagnose potential production issues by analyzing logs and monitoring data.

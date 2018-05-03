@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "resume": "node ./js/resume-converter.js"
+    "resume": "node ./js/resume-converter.js",
+    "jekyll": "bundle exec jekyll serve"
   },
   "author": "",
   "license": "ISC",
