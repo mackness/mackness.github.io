@@ -27,7 +27,7 @@
 	* Handlebars
 * **NoSQL databases**
 	* MongoDB
-	* Firebase 
+	* Firebase
 
 ###  Interested In:
 
@@ -37,7 +37,6 @@
 * [GO](https://golang.org/)
 * AWS
 * Linux systems
-* Cryptocurrencies  / Blockchian
 
 ###  Employment History:
 
@@ -69,7 +68,7 @@
 * Convert PSD files into high quality responsive HTML5 / CSS3 templates.
 * Mobile first responsive design using the latest CSS3 specs.
 * Write modular front end code that is compatible with a dynamic content management system.
-* Use version control / deployment systems that allowed for collaborative team based work. 
+* Use version control / deployment systems that allowed for collaborative team based work.
 * Maintain the highest possible level of cross browser and backward compatibility.
 * Constantly worked with JQuery / Javascript.
 * Requires a very strong understanding of web standards and best practices.
@@ -81,9 +80,9 @@
 
  * Worked with clients to design and develop original websites that were highly optimized for SEO.
  * Designed banner ads and leaderboard along with other results driven marketing material.
- * Designed visually engaging landing pages that encouraged conversions.	
- * Developed custom Wordpress themes from scratch in a local WAMP environment. 
- * Learned how to write extremely high quality code that is well commented and easy to understand. 
+ * Designed visually engaging landing pages that encouraged conversions.
+ * Developed custom Wordpress themes from scratch in a local WAMP environment.
+ * Learned how to write extremely high quality code that is well commented and easy to understand.
  * Constantly worked with JQuery / Javascript.
  * Used development tools to debug websites and work though cross browser compatibility issues.
 

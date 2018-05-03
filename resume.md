@@ -31,7 +31,7 @@ permalink: /resume/
 	* Handlebars
 * **NoSQL databases**
 	* MongoDB
-	* Firebase 
+	* Firebase
 
 ###  Interested In:
 
@@ -50,9 +50,11 @@ permalink: /resume/
 
 ##### Full Stack Web Developer (Jan 2017 ~ Present)
 
-* Contribute to high traffic front end systems.
-* Write extremeley high quality and maintainable front / backend JavaScript.
-* Quicky develop and deploy business crtitical features while improving and updating leagcy code.
+* Write and maintain high quality frontend / backend JavaScript.
+* Contribute to en ecosystem of internal modules cross functional modules and components.
+* Write high quality and meaningful unit tests that expose bugs and potential issues.
+* Contribute to business critical systems such as the communication web app and the registration module.
+* Diagnose potential production issues by analyzing logs and monitoring data.
 
 ####  [Whalerock Industries](http://www.whalerockindustries.com/)
 
@@ -74,7 +76,7 @@ permalink: /resume/
 * Convert PSD files into high quality responsive HTML5 / CSS3 templates.
 * Mobile first responsive design using the latest CSS3 specs.
 * Write modular front end code that is compatible with a dynamic content management system.
-* Use version control / deployment systems that allowed for collaborative team based work. 
+* Use version control / deployment systems that allowed for collaborative team based work.
 * Maintain the highest possible level of cross browser and backward compatibility.
 * Constantly worked with JQuery / Javascript.
 * Requires a very strong understanding of web standards and best practices.
@@ -86,9 +88,9 @@ permalink: /resume/
 
  * Worked with clients to design and develop original websites that were highly optimized for SEO.
  * Designed banner ads and leaderboard along with other results driven marketing material.
- * Designed visually engaging landing pages that encouraged conversions.	
- * Developed custom Wordpress themes from scratch in a local WAMP environment. 
- * Learned how to write extremely high quality code that is well commented and easy to understand. 
+ * Designed visually engaging landing pages that encouraged conversions.
+ * Developed custom Wordpress themes from scratch in a local WAMP environment.
+ * Learned how to write extremely high quality code that is well commented and easy to understand.
  * Constantly worked with JQuery / Javascript.
  * Used development tools to debug websites and work though cross browser compatibility issues.
 
