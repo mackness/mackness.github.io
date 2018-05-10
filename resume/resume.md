@@ -1,6 +1,10 @@
-# Mack Solomon
-### Santa Monica
-### 310.405.1257
+---
+layout: page
+title: Resume
+permalink: /resume/
+---
+
+<a href="/resume/resume.pdf" class="download-resume" target="_blank" download>download resume</a>
 
 ###  Skills:
 
@@ -35,8 +39,10 @@
 * [Elm](http://elm-lang.org/)
 * [Mithril](https://mithril.js.org/)
 * [GO](https://golang.org/)
+* Python
 * AWS
 * Linux systems
+* Cryptocurrencies  / Blockchian
 
 ###  Employment History:
 
@@ -44,9 +50,11 @@
 
 ##### Full Stack Web Developer (Jan 2017 ~ Present)
 
-* Contribute to high traffic front end systems.
-* Write extremeley high quality and maintainable front / backend JavaScript.
-* Quicky develop and deploy business crtitical features while improving and updating leagcy code.
+* Write and maintain high quality frontend / backend JavaScript.
+* Contribute to en ecosystem of internal cross functional modules and components.
+* Write high quality and meaningful unit tests that expose bugs and potential issues.
+* Contribute to business critical systems such as the communication web app and the registration module.
+* Diagnose potential production issues by analyzing logs and monitoring data.
 
 ####  [Whalerock Industries](http://www.whalerockindustries.com/)
 

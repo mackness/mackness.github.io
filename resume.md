@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 
-<a href="https://s3-us-west-1.amazonaws.com/macksol/resume.pdf" class="download-resume" target="_blank" download>download resume</a>
+<a href="/resume/resume.pdf" class="download-resume" target="_blank" download>download resume</a>
 
 ###  Skills:
 
