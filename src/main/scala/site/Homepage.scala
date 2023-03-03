@@ -14,31 +14,14 @@ object Homepage {
     )
   }
 
-  def setupUI(): Unit = {
-    val button = document.createElement("button")
-    button.textContent = "Click me!"
-    button.addEventListener(
-      "click",
-      { (e: dom.MouseEvent) =>
-        addClickedMessage()
-      }
-    )
-    document.body.appendChild(button)
+  def setupUI(): Unit = appendEl(document.body, "👀 check back soon...")
 
-    appendPar(document.body, "Hello World")
-    appendPar(document.body, "Super Cool Page", document.createElement("h1"))
-  }
-
-  def appendPar(
+  def appendEl(
       targetNode: dom.Node,
       text: String,
       el: dom.Node = document.createElement("p")
   ): Unit = {
     el.textContent = text
     targetNode.appendChild(el)
-  }
-
-  def addClickedMessage(): Unit = {
-    appendPar(document.body, "You clicked the button!")
   }
 }
