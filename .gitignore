@@ -41,3 +41,5 @@ bin/
 
 # general
 *.class
+package-lock.json
+node_modules/
