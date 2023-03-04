@@ -17,7 +17,7 @@ object Homepage {
 
   def appendEl(
       targetNode: dom.Node,
-      el: dom.Node = document.createElement("p")
+      el: dom.Node
   ): Unit = {
     targetNode.appendChild(el)
   }
