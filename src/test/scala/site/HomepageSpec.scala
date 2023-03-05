@@ -19,7 +19,7 @@ object HomepageSpec extends TestSuite {
 
   override def utestBeforeEach(path: Seq[String]): Unit = {
     TestUtils.clean()
-    Homepage.setupUI()
+    Site.main(Array.empty[String])
   }
 
   def tests = Tests {
