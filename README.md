@@ -1,5 +1,7 @@
 # mackness.github.io
 
+[![Deploy static content to Pages](https://github.com/mackness/mackness.github.io/actions/workflows/static.yml/badge.svg)](https://github.com/mackness/mackness.github.io/actions/workflows/static.yml)
+
 My humble personal site.
 
 ### Developing
