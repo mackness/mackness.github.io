@@ -40,7 +40,9 @@ object Site {
         <a href="mailto:macksol@gmail.com" class="social-link">
           <img src={Badge.gmail} />
         </a>
-        <img src={Badge.resume} />
+        <a href="https://mackness.github.io/resume.pdf">
+          <img src={Badge.resume} />
+        </a>
         <a href="https://github.com/mackness.gpg" class="social-link">
           <img src={Badge.pgp} />
         </a>
