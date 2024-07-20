@@ -25,6 +25,17 @@ a:hover {
     max-width: 715px;
 }
 
+#social-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+    #social-container {
+        display: block;
+    }
+}
+
 .social-link,
 .social-link:visited,
 .social-link:focus,
