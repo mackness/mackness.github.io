@@ -27,27 +27,33 @@ object Site {
     <div id="site-container">
       <strong>
         <p>
-          <code>Mack Solmomon / README.md</code>
+          <code class="strong">Mack Solmomon / README.md</code> 
         </p>
       </strong>
       <p><code>Hello there <span class="emoji">👋</span></code></p>
-      <p><code>Welcome to my personal site.</code></p>
-      <p><code>I'm a software engineer living in Los Angeles, CA. I'm passionate about Scala and learning as much as I can about building, monitoring and scaling backend distributed systems.</code></p>
+      <p><code>Welcome to my humble corner of the internet.</code></p>
+      <p>
+        <code>I am a passionate full-stack software engineer with over a decade of experience delivering cutting-edge digital products to hundreds
+of millions of users, currently employed at <a href="https://www.creditkarma.com">Credit Karma</a>.</code>
+      </p>
+      <p>
+        <code>Outside of work you'll likely find me training for the next 70.3 triathlon <span class="emoji">🏊‍♂️</span> <span class="emoji">🚴</span> <span class="emoji">🏃</span> in the summer or skiing <span class="emoji">⛷️</span> in the winter.</code>
+      </p>
       <div id="social-container">
         <a href="https://www.linkedin.com/in/macksolomon" class="social-link">
-          <img src={BadgeSrc.linkedin} />
+          <img class="social-img" src={BadgeSrc.linkedin} />
         </a>
         <a href="mailto:macksol@gmail.com" class="social-link">
-          <img src={BadgeSrc.gmail} />
+          <img class="social-img" src={BadgeSrc.gmail} />
         </a>
         <a href="https://mackness.github.io/resume/mack_solomon_resume.pdf" class="social-link">
-          <img src={BadgeSrc.resume} />
+          <img class="social-img" src={BadgeSrc.resume} />
         </a>
         <a href="https://github.com/mackness.gpg" class="social-link">
-          <img src={BadgeSrc.pgp} />
+          <img class="social-img" src={BadgeSrc.pgp} />
         </a>
       </div>
-      <p><code>Made with <span class="emoji">❤️</span> using <a href="https://www.scala-js.org/">Scala.js</a></code></p>
+      <p><code>Made with <span class="emoji">❤️</span> and <a href="https://www.scala-js.org/">Scala.js</a></code></p>
     </div>
   }
 }
