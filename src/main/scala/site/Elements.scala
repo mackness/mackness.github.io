@@ -21,7 +21,7 @@ object Elements {
       }
     )
     el.textContent = text
-    classname.map(el.classList.add(_))
+    classname.foreach(el.classList.add(_))
     el
   }
 }

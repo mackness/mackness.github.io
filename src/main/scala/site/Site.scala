@@ -2,17 +2,16 @@ package site
 
 import mhtml._
 import org.scalajs.dom
-import org.scalajs.dom.document
 
 object Site {
 
   def main(args: Array[String]): Unit =
     mount(
       dom.document.body,
-      getRootUI()
+      getRootUI
     )
 
-  object BadgeSrc {
+  private object BadgeSrc {
     val linkedin =
       "https://img.shields.io/badge/-Mack%20Solomon-0077B5?style=flat-square&logo=Linkedin&logoColor=white"
     val gmail =
@@ -23,14 +22,14 @@ object Site {
       "https://img.shields.io/badge/pgp-0xF83424824B3E4B90-313131?style=flat&labelColor=313131&color=313131"
   }
 
-  def getRootUI(): scala.xml.Node = {
+  private def getRootUI: scala.xml.Node = {
     <div id="site-container">
       <strong>
         <p>
           <code class="strong">Mack Solmomon / README.md</code> 
         </p>
       </strong>
-      <p><code>Hello there <span class="emoji">👋</span></code></p>
+      <p><code>Hello there <span class="emoji wave-animation">👋</span></code></p>
       <p><code>Welcome to my humble corner of the internet.</code></p>
       <p>
         <code>I am a passionate full-stack software engineer with over a decade of experience delivering cutting-edge digital products to hundreds
