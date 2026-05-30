@@ -23,11 +23,20 @@ object HomepageSpec extends TestSuite {
   }
 
   def tests = Tests {
+
     test("PageTitleTest") {
       assert(
         document
-          .querySelectorAll("h1")
-          .count(_.textContent == "👀 check back soon...") == 1
+          .querySelectorAll("code.strong")
+          .count(_.textContent.trim == "Mack Solmomon / README.md") == 1
+      )
+    }
+
+    test("SocialLinksTest") {
+      assert(
+        document
+          .querySelectorAll("#social-container .social-link")
+          .length == 4
       )
     }
   }
