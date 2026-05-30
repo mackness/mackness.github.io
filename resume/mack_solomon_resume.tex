@@ -1,0 +1,98 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+%----------------------------------------------------------------------------------------
+% Contact Information
+%----------------------------------------------------------------------------------------
+
+\name{Mack Solomon} % Your name
+\address{+1 (310) 405-1257 \\ 
+    Los Angeles, California, US \\
+    \href{mailto:macksol@gmail.com}{macksol@gmail.com}
+} 
+\address{\href{https://github.com/mackness}{github.com/mackness} \\
+    \href{https://www.linkedin.com/in/macksolomon}{linkedin.com/in/macksolomon} \\
+    \href{https://mackness.github.io/}{mackness.github.io}
+} 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% Professional Summary
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Professional Summary}
+
+{Versatile full-stack software engineer with over 10 years of experience shipping products to millions of users, working effectively across a wide range of domains and ecosystems including Scala, Rust, TypeScript, and Java.}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Work Experience
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\textbf{Staff Software Engineer} \hfill September 2025 --- Present \\
+Credit Karma (Backend Frameworks Team) \hfill \textit{Culver City, CA}
+\begin{itemize}
+    \item Cut major-version upgrades of Talon's Scala and TypeScript services from 40+ engineer-hours to under 10 by building an agentic upgrade system that autonomously fixes breaking changes, monitors CI, and opens review-ready PRs for teams across the company.
+\end{itemize}
+
+\textbf{Senior Software Engineer} \hfill August 2022 --- September 2025 \\
+Credit Karma (Backend Frameworks Team) \hfill \textit{Culver City, CA}
+\begin{itemize}
+    \item Led the 0-to-1 implementation of a set of platform features that cut failover time to the site's secondary DR region from 3 hours to 1 hour.
+    \item Designed and built endpoint readiness, a feature that probes a service's RPC endpoints with synthetic requests during the readiness phase, preventing instances from receiving production traffic before their endpoints are verified healthy.
+    \item Made releases of the team's core products faster and more predictable by leading the redesign of the publishing workflow for our internal Scala and TypeScript libraries.
+\end{itemize}
+
+\textbf{Software Engineer IV} \hfill January 2021 --- August 2022 \\
+Credit Karma (Autos Team) \hfill \textit{Culver City, CA}
+\begin{itemize}
+    \item Partnered with product and design to build an MVP of a marketplace that enabled Credit Karma members to find high-quality auto financing, generating millions annually for the business.
+    \item Worked across the stack on a feature that pre-filled 80\% of application forms significantly reducing friction and making it easier for Credit Karma members to apply for auto refinancing products.
+    \item Proactively identified and fixed a number of performance issues including one that reduced median request latency by 100ms on a critical revenue-generating surface.
+\end{itemize}
+    
+\textbf{Software Engineer III} \hfill April 2019 --- January 2021 \\
+Credit Karma (Autos Team) \hfill \textit{Culver City, CA}
+\begin{itemize}
+    \item Proactively picked up tasks to improve the team's velocity and developer experience such as adding automatic code formatting and linting for the team's React + TypeScript code base.
+    \item Configured complex multivariate experiments in our auto insurance marketplace for a number of features, allowing us to learn and iterate at a fast pace.
+\end{itemize}
+
+\textbf{Senior Frontend Engineer} \hfill July 2016 --- April 2019 \\
+eHarmony \hfill \textit{Westwood, CA}
+\begin{itemize}
+    \item Introduced SSR for React applications at eHarmony, reducing LCP (Largest Contentful Paint) timing across all web surfaces.
+    \item Introduced a component-centric code splitting pattern to reduce initial JavaScript payload size further improving the LCP metric across web surfaces.
+    \item Implemented the foundations of a design system which provided an opinionated framework for building new UI elements, improving consistency and velocity.
+\end{itemize}
+
+\textbf{Frontend Engineer} \hfill Aug 2014 --- July 2016 \\
+Whalerock Industries \hfill \textit{Westwood, CA}
+\begin{itemize}
+    \item Collaborated with the design team to develop high-quality responsive interfaces for personalities in the entertainment industry such as Howard Stern.
+    \item Converted wireframes into high quality functional prototypes presented to clients before starting the development phase.
+    \item Contributed features to an internal Django based CMS used by the editorial team to produce and organize content for various web properties.
+\end{itemize}
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+% Skills
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Programming Languages & Scala (Proficient), TypeScript (Proficient), Rust (Familiar), Python (Familiar) \\
+Technologies & Finagle, Akka, Alpakka, React, MySQL, Spanner, REST, GraphQL, Apache Thrift, gRPC
+\end{tabular}\\
+
+\end{rSection}
+
+\end{document}

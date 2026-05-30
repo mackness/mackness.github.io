@@ -20,7 +20,6 @@ object Site {
       "https://img.shields.io/badge/cv-Mack's%20Resume-2ea043?style=flat&labelColor=2ea043&color=2ea043"
     val pgp =
       "https://img.shields.io/badge/pgp-0xF83424824B3E4B90-313131?style=flat&labelColor=313131&color=313131"
-  }
 
   private def getRootUI: scala.xml.Node = {
     <div id="site-container">
@@ -32,11 +31,7 @@ object Site {
       <p><code>Hello there <span class="emoji wave-animation">👋</span></code></p>
       <p><code>Welcome to my humble corner of the internet.</code></p>
       <p>
-        <code>I am a passionate full-stack software engineer with over a decade of experience delivering cutting-edge digital products to hundreds
-of millions of users, currently employed at <a href="https://www.creditkarma.com">Credit Karma</a>.</code>
-      </p>
-      <p>
-        <code>Outside of work you'll likely find me training for the next 70.3 triathlon <span class="emoji">🏊‍♂️</span> <span class="emoji">🚴</span> <span class="emoji">🏃</span> in the summer or skiing <span class="emoji">⛷️</span> in the winter.</code>
+        <code>I'm a full-stack software engineer with over a decade of experience building products, currently employed at <a href="https://www.creditkarma.com">Credit Karma</a>.</code>
       </p>
       <div id="social-container">
         <a href="https://www.linkedin.com/in/macksolomon" class="social-link">
