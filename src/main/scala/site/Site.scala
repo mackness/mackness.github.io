@@ -20,6 +20,7 @@ object Site {
       "https://img.shields.io/badge/cv-Mack's%20Resume-2ea043?style=flat&labelColor=2ea043&color=2ea043"
     val pgp =
       "https://img.shields.io/badge/pgp-0xF83424824B3E4B90-313131?style=flat&labelColor=313131&color=313131"
+  }
 
   private def getRootUI: scala.xml.Node = {
     <div id="site-container">
