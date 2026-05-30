@@ -40,6 +40,11 @@ jobs:
       - name: Build Static Site
         run: |
           sbt fastOptJS
+      - name: Build Resume PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: resume
+          root_file: mack_solomon_resume.tex
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

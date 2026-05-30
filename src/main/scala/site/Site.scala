@@ -5,11 +5,23 @@ import org.scalajs.dom
 
 object Site {
 
-  def main(args: Array[String]): Unit =
+  def main(args: Array[String]): Unit = {
+    val route = Var(currentRoute)
+    dom.window.addEventListener(
+      "hashchange",
+      (_: dom.Event) => route := currentRoute
+    )
     mount(
       dom.document.body,
-      getRootUI
+      route.map {
+        case "/resume" => Resume.view
+        case _         => getRootUI
+      }
     )
+  }
+
+  private def currentRoute: String =
+    dom.window.location.hash.stripPrefix("#")
 
   private object BadgeSrc {
     val linkedin =
@@ -32,7 +44,7 @@ object Site {
       <p><code>Hello there <span class="emoji wave-animation">👋</span></code></p>
       <p><code>Welcome to my humble corner of the internet.</code></p>
       <p>
-        <code>I'm a full-stack software engineer with over a decade of experience building products, currently employed at <a href="https://www.creditkarma.com">Credit Karma</a>.</code>
+        <code>I'm a full-stack software engineer with over a decade of <a href="#/resume">experience</a> building products, currently employed at <a href="https://www.creditkarma.com">Credit Karma</a>.</code>
       </p>
       <div id="social-container">
         <a href="https://www.linkedin.com/in/macksolomon" class="social-link">

@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# Reminds you when a push changes the resume .tex (source of truth) without the
+# HTML resume (Resume.scala), so the site doesn't silently fall behind the PDF.
+#
+# Dumb co-change check — compares HEAD against its upstream; no content parsing.
+# Bypass any time with: git push --no-verify
+
+TEX="resume/mack_solomon_resume.tex"
+HTML="src/main/scala/site/Resume.scala"
+
+base=$(git rev-parse --verify -q @{upstream} || git rev-parse --verify -q origin/main) || exit 0
+changed=$(git diff --name-only "$base" HEAD)
+
+echo "$changed" | grep -qx "$TEX"  || exit 0   # tex not changing -> nothing to check
+echo "$changed" | grep -qx "$HTML" && exit 0   # html also changing -> assume in sync
+
+cat <<EOF >&2
+
+  Resume drift check
+  ─────────────────────
+  This push changes the resume source:
+      $TEX
+  but NOT the HTML resume:
+      $HTML
+
+  The .tex is the source of truth — update Resume.scala to match, or the
+  website resume will fall behind the PDF.
+
+  • Update the HTML, commit it, and push again, or
+  • Bypass this check:  git push --no-verify
+
+EOF
+
+exit 1

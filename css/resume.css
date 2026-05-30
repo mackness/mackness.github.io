@@ -1,0 +1,110 @@
+/* Resume page styles. `body`, `code`, and `a` are defined in index.css. */
+
+#resume-container {
+    padding: 8px 16px 48px;
+    max-width: 715px;
+}
+
+.resume-nav {
+    margin-bottom: 1.5rem;
+}
+
+.resume-header h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    margin: 0 0 0.25rem;
+    font-weight: 700;
+}
+
+.resume-contact {
+    margin: 0 0 1rem;
+    color: #444;
+}
+
+.resume-contact span {
+    margin-right: 0.75rem;
+    white-space: nowrap;
+}
+
+.resume-section {
+    margin-top: 2rem;
+}
+
+.resume-section > h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.25rem;
+    margin: 0 0 0.75rem;
+}
+
+.resume-summary {
+    margin: 0;
+}
+
+.resume-job {
+    margin-bottom: 1.25rem;
+}
+
+.resume-job-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 0.5rem;
+}
+
+.resume-job-title {
+    font-weight: 700;
+}
+
+.resume-job-dates,
+.resume-job-location {
+    color: #666;
+}
+
+.resume-job-sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 0.5rem;
+    color: #333;
+}
+
+.resume-job ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.resume-job li {
+    margin-bottom: 0.35rem;
+}
+
+.resume-skills dt {
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.resume-skills dd {
+    margin: 0 0 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .resume-job-head,
+    .resume-job-sub {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media print {
+    .resume-nav {
+        display: none;
+    }
+
+    a,
+    a:visited {
+        color: #111;
+        text-decoration: none;
+    }
+}
