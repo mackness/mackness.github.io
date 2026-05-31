@@ -10,47 +10,45 @@ object Resume {
       bullets: List[String]
   ): scala.xml.Node =
     <div class="resume-job">
-      <div class="resume-job-head">
+      <div class="resume-job-meta">
         <span class="resume-job-title">{title}</span>
         <span class="resume-job-dates">{dates}</span>
-      </div>
-      <div class="resume-job-sub">
-        <span>{company}</span>
+        <span class="resume-job-company">{company}</span>
         <span class="resume-job-location">{location}</span>
       </div>
       <ul>{bullets.map(b => <li>{b}</li>)}</ul>
     </div>
 
   val view: scala.xml.Node =
-    <div id="resume-container">
+    ManPage.page(
+      "MACK SOLOMON(1)",
+      "General Commands Manual",
       <nav class="resume-nav">
         <a href="#/">← back to home</a>
         <span> · </span>
         <a href="resume/mack_solomon_resume.pdf">download PDF</a>
-      </nav>
-
-      <header class="resume-header">
-        <h1>Mack Solomon</h1>
+      </nav>,
+      ManPage.section(
+        "NAME",
+        <p>Mack Solomon — Staff Software Engineer</p>,
         <p class="resume-contact">
           <span>Los Angeles, California, US</span>
           <span><a href="mailto:macksol@gmail.com">macksol@gmail.com</a></span>
-          <span><a href="https://github.com/mackness">github.com/mackness</a></span>
-          <span><a href="https://www.linkedin.com/in/macksolomon">linkedin.com/in/macksolomon</a></span>
+          <span><a href="https://github.com/mackness">GitHub</a></span>
+          <span><a href="https://www.linkedin.com/in/macksolomon">LinkedIn</a></span>
         </p>
-      </header>
-
-      <section class="resume-section">
-        <h2>Professional Summary</h2>
+      ),
+      ManPage.section(
+        "PROFESSIONAL SUMMARY",
         <p class="resume-summary">
           Versatile full-stack software engineer with over 10 years of experience shipping products to
           millions of users, working effectively across a wide range of domains and ecosystems including
           Scala, Rust, TypeScript, and Java.
         </p>
-      </section>
-
-      <section class="resume-section">
-        <h2>Work Experience</h2>
-        {
+      ),
+      ManPage.section(
+        "WORK EXPERIENCE",
+        <div>{
           List(
             job(
               "Staff Software Engineer",
@@ -116,17 +114,16 @@ object Resume {
               )
             )
           )
-        }
-      </section>
-
-      <section class="resume-section">
-        <h2>Skills</h2>
+        }</div>
+      ),
+      ManPage.section(
+        "SKILLS",
         <dl class="resume-skills">
           <dt>Programming Languages</dt>
           <dd>Scala (Proficient), TypeScript (Proficient), Rust (Familiar), Python (Familiar)</dd>
           <dt>Technologies</dt>
           <dd>Finagle, Akka, Alpakka, React, MySQL, Spanner, REST, GraphQL, Apache Thrift, gRPC</dd>
         </dl>
-      </section>
-    </div>
+      )
+    )
 }

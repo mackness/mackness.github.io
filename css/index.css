@@ -9,10 +9,6 @@ code {
     font-style: normal;
 }
 
-.strong {
-    font-weight: 800;
-}
-
 a,
 a:visited,
 a:focus,
@@ -20,33 +16,84 @@ a:hover {
     color: #0000EE;
 }
 
-#site-container {
-    padding: 8px 16px;
+/* ── Man-page layout (shared by homepage and resume) ─────────────── */
+
+.man-page {
     max-width: 715px;
+    padding: 12px 16px 28px;
+    line-height: 1.35;
 }
 
-#social-container {
+.man-line {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    gap: 0 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
-@media screen and (min-width: 600px) {
-    #social-container {
-        display: block;
-    }
+.man-line-center {
+    flex: 1 1 auto;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.social-link,
-.social-link:visited,
-.social-link:focus,
-.social-link:hover {
-    text-decoration: none;
-    width: 25%;
+.man-line-right {
+    text-align: right;
 }
+
+.man-header {
+    margin-bottom: 1rem;
+}
+
+.man-footer {
+    margin-top: 1.25rem;
+}
+
+.man-section {
+    margin-bottom: 0.9rem;
+}
+
+.man-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.man-section-body {
+    padding-left: 3.5ch;
+    margin-top: 0.4rem;
+}
+
+.man-section-body p {
+    margin: 0;
+}
+
+.man-section-body p + p {
+    margin-top: 0.5rem;
+}
+
+.man-options {
+    margin: 0;
+}
+
+.man-options p {
+    margin: 0 0 0.35rem;
+    color: #333;
+}
+
+.man-options p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Misc ─────────────────────────────────────────────────────────── */
 
 .emoji {
     font-family: apple color emoji, segoe ui emoji, noto color emoji, android emoji, emojisymbols, emojione mozilla, twemoji mozilla, segoe ui symbol;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .wave-animation {
@@ -64,4 +111,29 @@ a:hover {
     50% { transform: rotate(10deg); }
     60% { transform: rotate(0deg); }
     100% { transform: rotate(0deg); }
+}
+
+/* ── Narrow viewports: keep header/footer lines from overflowing ──── */
+
+@media screen and (max-width: 600px) {
+    .man-page {
+        font-size: 0.85rem;
+        padding: 12px 14px 24px;
+    }
+
+    .man-line {
+        gap: 0 0.5rem;
+    }
+
+    .man-line-center {
+        display: none;
+    }
+
+    .man-section {
+        margin-bottom: 0.75rem;
+    }
+
+    .man-section-body {
+        padding-left: 1.75ch;
+    }
 }

@@ -1,23 +1,12 @@
-/* Resume page styles. `body`, `code`, and `a` are defined in index.css. */
-
-#resume-container {
-    padding: 8px 16px 48px;
-    max-width: 715px;
-}
+/* Resume-specific styles. Base typography and the man-page layout
+   (`.man-page`, `.man-section`, header/footer lines) live in index.css. */
 
 .resume-nav {
     margin-bottom: 1.5rem;
 }
 
-.resume-header h1 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-    margin: 0 0 0.25rem;
-    font-weight: 700;
-}
-
 .resume-contact {
-    margin: 0 0 1rem;
+    margin: 0.25rem 0 0;
     color: #444;
 }
 
@@ -26,58 +15,62 @@
     white-space: nowrap;
 }
 
-.resume-section {
-    margin-top: 2rem;
-}
-
-.resume-section > h2 {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.25rem;
-    margin: 0 0 0.75rem;
-}
-
 .resume-summary {
     margin: 0;
+    max-width: 620px;
+    line-height: 1.55;
 }
 
 .resume-job {
-    margin-bottom: 1.25rem;
+    max-width: 620px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.resume-job-head {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0 0.5rem;
+.resume-job:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.resume-job-meta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 0.75rem;
+    row-gap: 0.1rem;
 }
 
 .resume-job-title {
     font-weight: 700;
 }
 
-.resume-job-dates,
-.resume-job-location {
-    color: #666;
-}
-
-.resume-job-sub {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0 0.5rem;
+.resume-job-company {
     color: #333;
 }
 
+.resume-job-dates,
+.resume-job-location {
+    text-align: right;
+    color: #666;
+}
+
 .resume-job ul {
-    margin: 0.4rem 0 0;
-    padding-left: 1.25rem;
+    margin: 0.65rem 0 0;
+    padding-left: 2.25rem;
 }
 
 .resume-job li {
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.55rem;
+    line-height: 1.55;
+}
+
+.resume-job li:last-child {
+    margin-bottom: 0;
+}
+
+.resume-skills {
+    max-width: 620px;
 }
 
 .resume-skills dt {
@@ -87,18 +80,55 @@
 
 .resume-skills dd {
     margin: 0 0 0.5rem;
+    line-height: 1.55;
 }
 
 @media screen and (max-width: 600px) {
-    .resume-job-head,
-    .resume-job-sub {
-        flex-direction: column;
-        gap: 0;
+    .resume-job-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-job-title {
+        order: 1;
+    }
+
+    .resume-job-company {
+        order: 2;
+    }
+
+    .resume-job-dates {
+        order: 3;
+        margin-top: 0.35rem;
+    }
+
+    .resume-job-location {
+        order: 4;
+    }
+
+    .resume-job-dates,
+    .resume-job-location {
+        text-align: left;
+    }
+
+    .resume-job {
+        margin-bottom: 1.1rem;
+        padding-bottom: 1.1rem;
+    }
+
+    .resume-job ul {
+        margin-top: 0.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .resume-job li {
+        margin-bottom: 0.45rem;
     }
 }
 
 @media print {
-    .resume-nav {
+    .resume-nav,
+    .man-header,
+    .man-footer {
         display: none;
     }
 
