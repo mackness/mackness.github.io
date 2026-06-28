@@ -1,140 +1,24 @@
-/* Resume-specific styles. Base typography and the man-page layout
-   (`.man-page`, `.man-section`, header/footer lines) live in index.css. */
+/* The RESUME.md buffer reuses the editor + markdown styles from index.css.
+   Resume-specific tweaks live here. */
 
-.resume-nav {
-    margin-bottom: 1.5rem;
-}
-
-.resume-contact {
-    margin: 0.25rem 0 0;
-    color: #444;
-}
-
-.resume-contact span {
-    margin-right: 0.75rem;
-    white-space: nowrap;
-}
-
-.resume-summary {
-    margin: 0;
-    max-width: 620px;
-    line-height: 1.55;
-}
-
-.resume-job {
-    max-width: 620px;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.resume-job:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.resume-job-meta {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 0.75rem;
-    row-gap: 0.1rem;
-}
-
-.resume-job-title {
-    font-weight: 700;
-}
-
-.resume-job-company {
-    color: #333;
-}
-
-.resume-job-dates,
-.resume-job-location {
-    text-align: right;
-    color: #666;
-}
-
-.resume-job ul {
-    margin: 0.65rem 0 0;
-    padding-left: 2.25rem;
-}
-
-.resume-job li {
-    margin-bottom: 0.55rem;
-    line-height: 1.55;
-}
-
-.resume-job li:last-child {
-    margin-bottom: 0;
-}
-
-.resume-skills {
-    max-width: 620px;
-}
-
-.resume-skills dt {
-    font-weight: 700;
-    margin-top: 0.5rem;
-}
-
-.resume-skills dd {
-    margin: 0 0 0.5rem;
-    line-height: 1.55;
-}
-
-@media screen and (max-width: 600px) {
-    .resume-job-meta {
-        grid-template-columns: 1fr;
-    }
-
-    .resume-job-title {
-        order: 1;
-    }
-
-    .resume-job-company {
-        order: 2;
-    }
-
-    .resume-job-dates {
-        order: 3;
-        margin-top: 0.35rem;
-    }
-
-    .resume-job-location {
-        order: 4;
-    }
-
-    .resume-job-dates,
-    .resume-job-location {
-        text-align: left;
-    }
-
-    .resume-job {
-        margin-bottom: 1.1rem;
-        padding-bottom: 1.1rem;
-    }
-
-    .resume-job ul {
-        margin-top: 0.5rem;
-        padding-left: 1.5rem;
-    }
-
-    .resume-job li {
-        margin-bottom: 0.45rem;
-    }
-}
+/* Give job bullets a touch more breathing room on the long résumé buffer. */
+.ed-no-split .ed-line { line-height: 1.6; }
 
 @media print {
-    .resume-nav,
-    .man-header,
-    .man-footer {
+    .ed-tabline,
+    .ed-statusline,
+    .ed-cmdline,
+    .ed-sign,
+    .ed-lnr {
         display: none;
     }
 
-    a,
-    a:visited {
-        color: #111;
-        text-decoration: none;
-    }
+    body { overflow: visible; background: #fff; color: #111; }
+    .ed { height: auto; display: block; }
+    .ed-main { display: block; overflow: visible; }
+    .ed-pane-text { overflow: visible; }
+
+    .md-h1, .md-h2, .md-h3 { color: #111; }
+    .md-link, .md-plainlink { color: #111; text-decoration: underline; }
+    .ed-heading { background: none !important; }
 }

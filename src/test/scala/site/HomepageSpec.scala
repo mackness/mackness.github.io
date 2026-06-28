@@ -21,32 +21,46 @@ object HomepageSpec extends TestSuite {
 
   def tests = Tests {
 
-    test("HeaderTitleTest") {
+    test("TablineTest") {
+      val tabs = document
+        .querySelectorAll(".ed-tabline .ed-tab .ed-tab-name")
+        .map(_.textContent.trim)
+        .toSet
+      assert(tabs.contains("HELLO.md"))
+    }
+
+    test("HeadingTest") {
+      // The heading renders once per layout; scope to one to assert it's there.
       assert(
         document
-          .querySelectorAll(".man-header .man-line-left")
-          .count(_.textContent.trim == "MACK SOLOMON(1)") == 1
+          .querySelectorAll(".ed-lines-desktop .md-h1")
+          .count(_.textContent.contains("Mack Solomon")) == 1
       )
     }
 
-    test("SectionsTest") {
-      val titles = document
-        .querySelectorAll(".man-section-title")
+    test("BufferLinesTest") {
+      // Desktop is hard-wrapped to 12 numbered lines.
+      val desktop = document
+        .querySelectorAll(".ed-lines-desktop .ed-buffer .ed-line .ed-lnr")
         .map(_.textContent.trim)
-        .toSet
-      assert(titles.contains("NAME"))
-      assert(titles.contains("DESCRIPTION"))
-      assert(titles.contains("OPTIONS"))
-      assert(titles.contains("SEE ALSO"))
+        .toList
+      assert(desktop.length == 12)
+      assert(desktop.head == "1")
+      assert(desktop.last == "12")
+
+      // Mobile is one soft-wrapping content block (gutter numbered by JS at
+      // runtime; layout isn't computed under jsdom, so just assert the content).
+      val mobile = document.querySelector(".ed-soft-content")
+      assert(mobile != null)
+      assert(mobile.textContent.contains("full-stack software engineer"))
     }
 
-    test("OptionsLinksTest") {
+    test("LinksTest") {
       val hrefs = document
-        .querySelectorAll(".man-options a.man-opt")
+        .querySelectorAll(".ed-pane-text a")
         .map(_.asInstanceOf[dom.Element].getAttribute("href"))
         .toList
-      assert(hrefs.length == 3)
-      assert(hrefs.contains("#/resume"))
+      assert(hrefs.exists(_.endsWith("mack_solomon_resume.pdf")))
       assert(hrefs.exists(_.contains("linkedin.com/in/macksolomon")))
       assert(hrefs.exists(_.startsWith("mailto:")))
     }

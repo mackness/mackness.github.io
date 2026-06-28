@@ -1,139 +1,370 @@
-body,
-code {
+/* ──────────────────────────────────────────────────────────────────────
+   Neovim editor theme — colors taken verbatim from the author's config:
+   vscode.nvim (Mofiqul) `dark` style (VSCode Dark Modern), with barbar.nvim
+   tabs and mini.statusline. Every value below maps to a highlight group in
+   ~/.local/share/nvim/lazy/vscode.nvim/lua/vscode/{colors,theme}.lua.
+   ────────────────────────────────────────────────────────────────────── */
+
+:root {
+    /* Core UI (vscColors) */
+    --bg:           #1F1F1F;  /* vscBack / Normal bg            */
+    --bg-tab:       #252526;  /* vscTabOutside / tabline + LeftDark */
+    --bg-tab-other: #2D2D2D;  /* vscTabOther / inactive tab     */
+    --fg:           #D4D4D4;  /* vscFront / Normal fg           */
+    --fg-dim:       #808080;  /* vscGray                        */
+    --linenr:       #5A5A5A;  /* vscLineNumber / LineNr         */
+    --linenr-cur:   #BBBBBB;  /* vscPopupFront / CursorLineNr   */
+    --winsep:       #444444;  /* vscSplitDark / WinSeparator    */
+    --selection:    #264F78;  /* vscSelection / Visual          */
+
+    /* Syntax (vscColors) */
+    --blue:         #569CD6;  /* @markup.heading.1, markdownBold, keywords */
+    --light-blue:   #9CDCFE;  /* @markup.link.label, identifiers */
+    --orange:       #CE9178;  /* @markup.heading.2, strings, raw */
+    --yellow:       #DCDCAA;  /* @markup.heading.3, functions   */
+    --yellow-orange:#D7BA7D;  /* vscYellowOrange / modified (unsaved) */
+
+    --heading-bg:   #343B41;  /* vscPopupHighlightGray          */
+
+    /* Statusline (mini.statusline groups) */
+    --stl-dark:     #252526;  /* LeftDark  → Devinfo            */
+    --stl-mid:      #373737;  /* LeftMid   → Filename           */
+    --stl-mode:     #98C379;  /* green mode accent              */
+    --stl-mode-fg:  #1F1F1F;  /* dark text on the green block   */
+
+    --scroll-thumb: #424242;  /* vscSplitThumb                  */
+    --colorcolumn:  #2D2D2D;  /* ColorColumn (set to '#2d2d2d') */
+
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono",
+            "Roboto Mono", Menlo, Consolas, monospace;
+
+    --fz: 16px;
+    --lh: 1.15;
+
+    /* Gutter width (sign 2.4ch + line number 3ch + 1.4ch margin) and the
+       buffer measure: the gutter plus 80 text columns, so lines wrap at the
+       colorcolumn ruler. */
+    --gutter:  6.8ch;
+    --measure: calc(var(--gutter) + 80ch);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-style: normal;
 }
 
-a,
-a:visited,
-a:focus,
-a:hover {
-    color: #0000EE;
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--mono);
+    font-size: var(--fz);
+    line-height: var(--lh);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-/* ── Man-page layout (shared by homepage and resume) ─────────────── */
+a { color: inherit; text-decoration: none; }
 
-.man-page {
-    max-width: 715px;
-    padding: 12px 16px 28px;
-    line-height: 1.35;
+::selection { background: var(--selection); }
+
+/* ── Whole-screen layout ──────────────────────────────────────────────── */
+
+.ed {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--bg);
 }
 
-.man-line {
+/* ── Tabline (barbar) ─────────────────────────────────────────────────── */
+
+.ed-tabline {
     display: flex;
-    justify-content: space-between;
-    gap: 0 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    align-items: stretch;
+    height: 38px;
+    background: var(--bg-tab);
+    font-size: 0.92rem;
+    user-select: none;
+    overflow: hidden;
+}
+
+.ed-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.55ch;
+    padding: 0 1.1rem;
     white-space: nowrap;
 }
 
-.man-line-center {
+/* Active buffer, shown in its unsaved/modified state (barbar BufferCurrentMod):
+   the rectangular tab keeps the editor background; only the filename color and
+   the close × → gold dot change. */
+.ed-tab-active { background: var(--bg); }
+
+.ed-tab-name { color: var(--yellow-orange); letter-spacing: 0.01em; }
+
+.ed-tab-mod {
+    margin-left: 0.5ch;
+    font-size: 0.8em;
+    color: var(--yellow-orange);
+}
+
+.ed-tabfill {
     flex: 1 1 auto;
-    text-align: center;
+    background: var(--bg-tab);
+}
+
+/* ── Editor body ──────────────────────────────────────────────────────── */
+
+.ed-main {
+    position: relative;
+    display: flex;
+    min-height: 0;
     overflow: hidden;
-    text-overflow: ellipsis;
+    background: var(--bg);
 }
 
-.man-line-right {
+/* The vertical ruler: a colorcolumn at text column 120 (ColorColumn = #2d2d2d
+   in the author's config). Drawn full-height behind the buffer so it stays
+   put while the buffer scrolls — like Neovim. Off-screen on narrow windows. */
+.ed-main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--measure);
+    width: 1ch;
+    background: var(--colorcolumn);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ed-pane { min-height: 0; }
+
+.ed-pane-text {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 4px 0 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+/* Two presentations share the pane; CSS shows the one that fits the viewport.
+   The mobile layout is hidden until the breakpoint. */
+.ed-lines { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; }
+.ed-lines-mobile { display: none; }
+
+/* Mobile: a flowing text column that soft-wraps, beside a gutter numbered per
+   visual row by JS. Laid out as a flex row (gutter | content). */
+.ed-soft { flex-direction: row; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.ed-soft-gutter {
+    flex: 0 0 var(--gutter);
+    padding-right: 1.4ch;
     text-align: right;
+    color: var(--linenr);
+    white-space: pre;
+    line-height: var(--lh);
+    user-select: none;
+    overflow: hidden;
+}
+.ed-soft-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-right: 2ch;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    line-height: var(--lh);
+    color: var(--fg);
 }
 
-.man-header {
-    margin-bottom: 1rem;
+/* The command line mirrors the visible layout's line count, so it toggles too. */
+.ed-cmdline-mobile { display: none; }
+
+/* Wrap the buffer at the ruler (gutter + 80 columns). */
+.ed-buffer { position: relative; flex: 0 0 auto; width: 100%; max-width: var(--measure); }
+
+/* Filler line numbers fill the gutter down to the bottom of the pane.
+   flex-basis 0 means it only occupies leftover space (none when the buffer
+   already overflows), and overflow:hidden clips the surplus numbers. */
+.ed-filler { flex: 1 1 0; min-height: 0; overflow: hidden; }
+.ed-line-filler { color: var(--linenr); }
+
+/* ── Buffer lines (sign column · line number · text) ──────────────────── */
+
+.ed-line {
+    display: flex;
+    align-items: flex-start;
+    padding-right: 2ch;
+    min-height: calc(var(--fz) * var(--lh));
 }
 
-.man-footer {
-    margin-top: 1.25rem;
+.ed-sign {
+    flex: 0 0 2.4ch;
+    text-align: center;
+    color: var(--linenr);
+    white-space: nowrap;
 }
 
-.man-section {
-    margin-bottom: 0.9rem;
+.ed-lnr {
+    flex: 0 0 3ch;
+    text-align: right;
+    margin-right: 1.4ch;
+    color: var(--linenr);
+    font-variant-numeric: tabular-nums;
+    user-select: none;
 }
 
-.man-section-title {
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;
+/* The buffer shows raw markdown source with Treesitter-style syntax
+   highlighting (monospace), matching the author's Neovim. The only thing
+   "rendered" is links: shown as the clickable label, not [text](url).
+   Wrapped lines align under the line's text start (breakindent = true). */
+.ed-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: break-word;
+    white-space: normal;
+    color: var(--fg);
 }
 
-.man-section-body {
-    padding-left: 3.5ch;
-    margin-top: 0.4rem;
+/* ── Markdown syntax highlighting (vscode.nvim Treesitter mappings) ────── */
+
+/* Headings: `#`/`##`/`###` shown inline, colored per level. */
+.md-h1 { color: var(--blue);   font-weight: 700; }
+.md-h2 { color: var(--orange); font-weight: 700; }
+.md-h3 { color: var(--yellow); font-weight: 700; }
+
+.md-marker { color: var(--fg); }                       /* list dash `-`      */
+.md-meta   { color: var(--fg-dim); }                   /* dim prose          */
+.md-bold   { color: var(--blue); font-weight: 700; }   /* **bold** = vscBlue */
+
+/* Rendered links: just the label (@markup.link.label = vscLightBlue).
+   Hover/active turns yellow-orange, matching the unsaved-buffer indicator. */
+.md-link,
+.md-plainlink {
+    color: var(--light-blue);
+    text-decoration: underline;
+}
+.md-link:hover, .md-link:active,
+.md-plainlink:hover, .md-plainlink:active {
+    color: var(--yellow-orange);
 }
 
-.man-section-body p {
-    margin: 0;
-}
-
-.man-section-body p + p {
-    margin-top: 0.5rem;
-}
-
-.man-options {
-    margin: 0;
-}
-
-.man-options p {
-    margin: 0 0 0.35rem;
-    color: #333;
-}
-
-.man-options p:last-child {
-    margin-bottom: 0;
-}
-
-/* ── Misc ─────────────────────────────────────────────────────────── */
+/* ── Emoji ────────────────────────────────────────────────────────────── */
 
 .emoji {
-    font-family: apple color emoji, segoe ui emoji, noto color emoji, android emoji, emojisymbols, emojione mozilla, twemoji mozilla, segoe ui symbol;
-    font-size: 1.25rem;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji",
+        "Twemoji Mozilla", "Segoe UI Symbol", sans-serif;
 }
 
 .wave-animation {
-    animation: wave 1.5s ease-in-out;
+    /* 0.4s delay + 6 × 1.6s = 10s of waving from page load, then rests. */
+    animation: wave 1.6s ease-in-out 0.4s 6;
     display: inline-block;
     transform-origin: 70% 70%;
 }
 
 @keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(14deg); }
+    20%  { transform: rotate(-8deg); }
+    30%  { transform: rotate(14deg); }
+    40%  { transform: rotate(-4deg); }
+    50%  { transform: rotate(10deg); }
+    60%  { transform: rotate(0deg); }
     100% { transform: rotate(0deg); }
 }
 
-/* ── Narrow viewports: keep header/footer lines from overflowing ──── */
+/* ── Statusline (mini.statusline) ─────────────────────────────────────── */
 
-@media screen and (max-width: 600px) {
-    .man-page {
-        font-size: 0.85rem;
-        padding: 12px 14px 24px;
-    }
+.ed-statusline {
+    display: flex;
+    align-items: stretch;
+    height: 30px;
+    background: var(--stl-dark);
+    font-size: var(--fz);
+    line-height: 30px;
+    white-space: nowrap;
+    user-select: none;
+    overflow: hidden;
+}
 
-    .man-line {
-        gap: 0 0.5rem;
-    }
+.ed-statusline > span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1.1ch;
+}
 
-    .man-line-center {
-        display: none;
-    }
+/* Mode = green accent block (Normal mode) */
+.ed-stl-mode   { background: var(--stl-mode); color: var(--stl-mode-fg); font-weight: 700; }
 
-    .man-section {
-        margin-bottom: 0.75rem;
-    }
+/* Git branch = LeftDark */
+.ed-stl-branch { background: var(--stl-dark); color: var(--fg); }
 
-    .man-section-body {
-        padding-left: 1.75ch;
-    }
+/* Filename = LeftMid, extending across the rest of the bar */
+.ed-stl-path   { background: var(--stl-mid); color: var(--fg);
+                 flex: 0 1 auto; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.ed-stl-spacer { background: var(--stl-mid); flex: 1 1 auto; padding: 0; }
+
+/* ── Command line ─────────────────────────────────────────────────────── */
+
+.ed-cmdline {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 1ch;
+    background: var(--bg);
+    color: var(--fg);
+    font-size: var(--fz);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Scrollbars ───────────────────────────────────────────────────────── */
+
+.ed-pane-text::-webkit-scrollbar { width: 10px; }
+.ed-pane-text::-webkit-scrollbar-track { background: transparent; }
+.ed-pane-text::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 5px;
+    border: 2px solid var(--bg);
+}
+.ed-pane-text::-webkit-scrollbar-thumb:hover { background: #4a4a4a; }
+.ed-pane-text { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) transparent; }
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+
+@media screen and (max-width: 820px) {
+    :root { --fz: 13px; }
+
+    .ed-tab { padding: 0 0.8rem; }
+}
+
+/* Below ~768px the 80-column desktop wrapping no longer fits, so swap to the
+   short-wrapped mobile buffer. It wraps at ~30 columns, so it can use a larger,
+   readable font instead of the cramped desktop-tablet size. */
+@media screen and (max-width: 768px) {
+    :root { --fz: 15px; }
+
+    .ed-lines-desktop { display: none; }
+    .ed-lines-mobile { display: flex; }
+    .ed-cmdline-desktop { display: none; }
+    .ed-cmdline-mobile { display: block; }
+}
+
+@media screen and (max-width: 520px) {
+    /* Keep the larger mobile font from the 768px breakpoint; only tighten the
+       gutter so the ~30-column lines still fit on the narrowest phones. */
+    :root { --gutter: 5.5ch; }
+
+    .ed-sign { flex-basis: 2ch; }
+    .ed-lnr { flex-basis: 2.5ch; margin-right: 1ch; }
+    .ed-stl-branch { display: none; }
 }
